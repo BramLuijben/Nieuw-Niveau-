@@ -66,6 +66,9 @@ export default function Klachtenformulier() {
         <div className={styles.infoBlock}>
           <strong>Klachtenregeling conform Wkkgz</strong>
           <p>U kunt ook direct contact opnemen via <a href="mailto:info@nieuwniveau.nl">info@nieuwniveau.nl</a> of <a href="tel:+31629242833">+31 6 29 24 28 33</a>.</p>
+          <a href="/Klachtenregeling.docx" download className={styles.downloadBtn}>
+            ↓ Download klachtenregeling (.docx)
+          </a>
         </div>
 
         {status === 'success' ? (
