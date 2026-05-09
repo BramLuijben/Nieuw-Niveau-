@@ -8,46 +8,53 @@
   position: absolute;
   top: 84px;
   right: 0;
-  width: 280px;
-  height: 280px;
+  width: 320px;
+  height: 320px;
   pointer-events: none;
   z-index: 0;
 }
 
+/* Atmosfeer — groot en geblurd als kleur-achtergrond */
 .cornerBlob1 {
   position: absolute;
-  width: 160px; height: 160px;
+  width: 260px; height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, var(--teal-licht), var(--teal));
-  top: 0; right: -30px;
-  opacity: 0.70;
+  background: radial-gradient(circle at 45% 45%, var(--teal-licht), var(--teal));
+  top: -40px; right: -60px;
+  filter: blur(55px);
+  opacity: 0.35;
 }
 
+/* Zichtbare cirkel — teal */
 .cornerBlob2 {
+  position: absolute;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 38%, var(--teal-licht), var(--teal));
+  top: 10px; right: -20px;
+  filter: blur(4px);
+  opacity: 0.78;
+}
+
+/* Zichtbare cirkel — salmon, overlapt teal */
+.cornerBlob3 {
   position: absolute;
   width: 110px; height: 110px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--zalm-licht), var(--zalm));
-  top: 80px; right: 100px;
-  opacity: 0.82;
+  top: 70px; right: 80px;
+  filter: blur(3px);
+  opacity: 0.85;
 }
 
-.cornerBlob3 {
-  position: absolute;
-  width: 80px; height: 80px;
-  border-radius: 50%;
-  background: var(--zalm-donker);
-  top: 20px; right: 130px;
-  opacity: 0.68;
-}
-
+/* Accent dot — scherp */
 .cornerBlob4 {
   position: absolute;
-  width: 55px; height: 55px;
+  width: 58px; height: 58px;
   border-radius: 50%;
-  background: var(--zalm-heel-licht);
-  top: 150px; right: 20px;
-  opacity: 0.90;
+  background: var(--zalm-donker);
+  top: 170px; right: 30px;
+  opacity: 0.72;
 }
 
 .heroSubtitel {
