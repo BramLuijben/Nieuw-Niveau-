@@ -131,9 +131,8 @@
   border-radius: 50%;
   background: radial-gradient(circle at 40% 40%, var(--teal-licht), var(--teal));
   top: -8%; right: 5%;
-  filter: blur(80px);
-  opacity: 0.45;
-  mix-blend-mode: multiply;
+  filter: blur(28px);
+  opacity: 0.72;
   animation: float1 12s ease-in-out infinite alternate;
 }
 
@@ -144,64 +143,60 @@
   border-radius: 50%;
   background: radial-gradient(circle at 45% 55%, var(--zalm-licht), var(--zalm));
   top: 25%; right: -5%;
-  filter: blur(55px);
-  opacity: 0.65;
-  mix-blend-mode: multiply;
+  filter: blur(18px);
+  opacity: 0.80;
   animation: float2 10s ease-in-out infinite alternate;
   animation-delay: -2s;
 }
 
-/* Bol 3 — middel, creme, bottom-right */
+/* Bol 3 — middel, creme-donker, bottom-right */
 .blob3 {
   position: absolute;
   width: 280px; height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, var(--creme-donker), var(--zalm-heel-licht));
+  background: radial-gradient(circle at 50% 50%, var(--zalm-heel-licht), var(--creme-donker));
   bottom: 5%; right: 8%;
-  filter: blur(35px);
-  opacity: 0.85;
-  mix-blend-mode: multiply;
+  filter: blur(12px);
+  opacity: 0.90;
   animation: float3 14s ease-in-out infinite alternate;
   animation-delay: -4s;
 }
 
-/* Bol 4 — middel, teal-donker, midden-links */
+/* Bol 4 — middel, teal, midden */
 .blob4 {
   position: absolute;
   width: 240px; height: 240px;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 40%, #2a4f4f, #1a3535);
   top: 45%; right: 44%;
-  filter: blur(50px);
-  opacity: 0.35;
-  mix-blend-mode: multiply;
+  filter: blur(20px);
+  opacity: 0.60;
   animation: float4 9s ease-in-out infinite alternate;
   animation-delay: -1s;
 }
 
-/* Bol 5 — klein, salmon-licht, top-links */
+/* Bol 5 — klein, salmon, top-links */
 .blob5 {
   position: absolute;
   width: 170px; height: 170px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--zalm-licht), var(--zalm));
   top: 12%; right: 42%;
-  filter: blur(20px);
-  opacity: 0.7;
-  mix-blend-mode: multiply;
+  filter: blur(10px);
+  opacity: 0.82;
   animation: float5 8s ease-in-out infinite alternate;
   animation-delay: -3s;
 }
 
-/* Bol 6 — klein, cream-licht, bottom-links */
+/* Bol 6 — klein, warm accent */
 .blob6 {
   position: absolute;
   width: 130px; height: 130px;
   border-radius: 50%;
-  background: var(--zalm-cream);
+  background: var(--zalm-licht);
   bottom: 22%; right: 37%;
-  filter: blur(15px);
-  opacity: 0.9;
+  filter: blur(8px);
+  opacity: 0.88;
   animation: float6 11s ease-in-out infinite alternate;
   animation-delay: -5s;
 }
@@ -213,9 +208,8 @@
   border-radius: 50%;
   background: var(--zalm-donker);
   top: 60%; right: 51%;
-  filter: blur(22px);
-  opacity: 0.5;
-  mix-blend-mode: multiply;
+  filter: blur(10px);
+  opacity: 0.68;
   animation: float7 7s ease-in-out infinite alternate;
   animation-delay: -6s;
 }
@@ -225,11 +219,11 @@
   .heroBlobScene { min-height: 300px; }
   .homeText      { padding: 40px 5vw; }
 
-  .blob1 { width: 260px; height: 260px; }
-  .blob2 { width: 220px; height: 220px; }
-  .blob3 { width: 180px; height: 180px; }
-  .blob4 { width: 160px; height: 160px; }
-  .blob5 { width: 110px; height: 110px; }
-  .blob6 { width:  90px; height:  90px; }
-  .blob7 { width:  80px; height:  80px; }
+  .blob1 { width: 260px; height: 260px; filter: blur(18px); }
+  .blob2 { width: 220px; height: 220px; filter: blur(12px); }
+  .blob3 { width: 180px; height: 180px; filter: blur(8px);  }
+  .blob4 { width: 160px; height: 160px; filter: blur(14px); }
+  .blob5 { width: 110px; height: 110px; filter: blur(6px);  }
+  .blob6 { width:  90px; height:  90px; filter: blur(5px);  }
+  .blob7 { width:  80px; height:  80px; filter: blur(6px);  }
 }

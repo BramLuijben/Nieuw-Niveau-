@@ -8,6 +8,7 @@ type Status = 'idle' | 'loading' | 'success' | 'error'
 
 export default function ContactContent() {
   const [status, setStatus] = useState<Status>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
   const [form, setForm] = useState({
     naam: '',
     email: '',
@@ -25,8 +26,15 @@ export default function ContactContent() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      setStatus(res.ok ? 'success' : 'error')
+      if (res.ok) {
+        setStatus('success')
+      } else {
+        const data = await res.json().catch(() => ({}))
+        setErrorMsg(data.error || 'Er is iets misgegaan.')
+        setStatus('error')
+      }
     } catch {
+      setErrorMsg('Geen verbinding. Controleer je internetverbinding.')
       setStatus('error')
     }
   }
@@ -131,7 +139,7 @@ export default function ContactContent() {
                 </div>
 
                 {status === 'error' && (
-                  <p className={styles.errorMsg}>Er is iets misgegaan. Probeer het opnieuw of stuur een e-mail naar info@nieuwniveau.nl.</p>
+                  <p className={styles.errorMsg}>{errorMsg || 'Er is iets misgegaan. Probeer het opnieuw of stuur een e-mail naar info@nieuwniveau.nl.'}</p>
                 )}
 
                 <MotionButton
