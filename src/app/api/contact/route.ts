@@ -9,12 +9,12 @@ interface ContactForm {
   bericht?: string
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
-  if (!process.env.RESEND_API_KEY) {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
     return NextResponse.json({ error: 'E-mail service niet geconfigureerd' }, { status: 503 })
   }
+  const resend = new Resend(apiKey)
 
   try {
     const { naam, email, telefoon, ik_ben, bericht }: ContactForm = await request.json()
