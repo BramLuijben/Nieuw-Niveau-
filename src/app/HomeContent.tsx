@@ -86,7 +86,6 @@ export default function HomeContent() {
         <div className={styles.blob5} />
         <div className={styles.blob6} />
         <div className={styles.blob7} />
-        <div className={styles.blobFadeLeft} />
       </div>
     </main>
   )
