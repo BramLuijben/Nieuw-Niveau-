@@ -1,0 +1,189 @@
+.page {
+  background: linear-gradient(180deg, var(--creme) 0%, var(--creme-warm) 100%);
+  overflow: hidden;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: -200px;
+  width: 500px; height: 500px;
+  background: var(--zalm-cream);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.werkwijzeIntro {
+  font-size: 16px;
+  max-width: 56ch;
+  color: var(--grijs);
+  margin-bottom: 36px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1000px) { .timeline { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .timeline { grid-template-columns: 1fr; } }
+
+.step {
+  background: var(--wit);
+  border-radius: 16px;
+  border: 1px solid var(--rand);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+}
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(201,110,85,0.15);
+  border-color: var(--zalm);
+}
+
+.stepTop {
+  height: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.stepIcon {
+  width: 54px; height: 54px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.stepIcon svg { width: 24px; height: 24px; }
+
+.stepNumPill {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(255,255,255,0.95);
+  color: var(--zwart);
+  font-family: var(--font-fraunces);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.stepBody { padding: 20px 20px 22px; flex: 1; }
+.stepTitle { font-size: 17px; margin-bottom: 8px; }
+.stepDesc { font-size: 13px; line-height: 1.55; color: var(--grijs); margin: 0; }
+
+/* Methodieken */
+.methodiekenSection {
+  margin: 64px 0 48px;
+}
+
+.methodiekIntroText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--zwart-zacht);
+  max-width: 72ch;
+  margin-bottom: 12px !important;
+}
+
+.methodiekenPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.methodiekPill {
+  padding: 9px 18px;
+  background: var(--wit);
+  border: 1.5px solid var(--rand);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--zwart);
+  transition: all 0.2s;
+}
+.methodiekPill:hover {
+  border-color: var(--zalm);
+  background: var(--zalm-heel-licht);
+  color: var(--zalm-donker);
+}
+
+.methodiekenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 48px;
+}
+@media (max-width: 900px) { .methodiekenGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .methodiekenGrid { grid-template-columns: 1fr; } }
+
+.methodiekCard {
+  background: var(--wit);
+  border: 1px solid var(--rand);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.methodiekCard:hover { border-color: var(--zalm); transform: translateY(-4px); }
+
+.methodiekDot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--zalm);
+  flex-shrink: 0;
+}
+.methodiekTitel {
+  font-family: var(--font-fraunces);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--zwart);
+  margin: 0;
+}
+.methodiekDesc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--grijs);
+  margin: 0;
+}
+
+/* CTA strip */
+.werkwijzeCta {
+  padding: 24px 28px;
+  background: var(--zwart);
+  color: var(--wit);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.werkwijzeCta::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, var(--zalm) 0%, transparent 70%);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+.ctaTitle { color: var(--wit); font-size: 20px; margin-bottom: 4px; position: relative; z-index: 1; }
+.ctaDesc { color: rgba(255,255,255,0.75); font-size: 13.5px; line-height: 1.5; margin: 0; position: relative; z-index: 1; }
+.werkwijzeCta a { position: relative; z-index: 1; flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .werkwijzeCta { flex-direction: column; align-items: flex-start; }
+}

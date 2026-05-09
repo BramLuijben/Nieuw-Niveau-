@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="85 55 740 345">
+  <!-- Linker figuur (salmon) -->
+  <circle cx="390" cy="108" r="38" fill="none" stroke="#df6d4b" stroke-width="13"/>
+  <path d="M 302,248 A 88,88 0 0,1 478,248 Z" fill="#df6d4b"/>
+
+  <!-- Rechter figuur (donker) -->
+  <circle cx="512" cy="133" r="38" fill="none" stroke="#1f1f21" stroke-width="13"/>
+  <path d="M 424,273 A 88,88 0 0,1 600,273 Z" fill="#1f1f21"/>
+
+  <!-- Tekst -->
+  <text x="450" y="375" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="86" font-weight="700" letter-spacing="6" fill="#df6d4b">NIEUW NIVEAU</text>
+</svg>

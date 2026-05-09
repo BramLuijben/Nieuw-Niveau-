@@ -1,0 +1,37 @@
+
+> nieuw-niveau@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.3.1
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.151:3000
+
+ ✓ Starting...
+ ✓ Ready in 1523ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.4s (1635 modules)
+ GET / 200 in 4701ms
+ GET / 200 in 97ms
+ ○ Compiling /voor-wie ...
+ ✓ Compiled /voor-wie in 532ms (1615 modules)
+ GET /voor-wie 200 in 782ms
+ ✓ Compiled /werkwijze in 362ms (1626 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /werkwijze 200 in 480ms
+ ✓ Compiled /over-mij in 317ms (1637 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /over-mij 200 in 496ms
+ ✓ Compiled /diensten in 345ms (1648 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /diensten 200 in 505ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 596ms (1659 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /contact 200 in 763ms
+ GET / 200 in 73ms
+ ○ Compiling /icon.png ...
+ ✓ Compiled /icon.png in 576ms (908 modules)
+ GET /icon.png?9a2513e78f98103f 200 in 825ms
+ GET /voor-wie 200 in 128ms
+ GET /werkwijze 200 in 25ms
+ GET /over-mij 200 in 23ms

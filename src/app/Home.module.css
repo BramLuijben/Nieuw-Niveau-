@@ -1,0 +1,118 @@
+/* ══════════════════════════════════════
+   HERO LAYOUT
+══════════════════════════════════════ */
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 84px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 84px;
+  }
+}
+
+/* ── Tekst kolom ── */
+.homeText {
+  padding: 60px 5vw 60px 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      30deg,
+      transparent 0px,
+      transparent 47px,
+      rgba(212, 200, 188, 0.20) 47px,
+      rgba(212, 200, 188, 0.20) 48px
+    ),
+    linear-gradient(180deg, var(--creme) 0%, var(--creme-warm) 100%);
+  position: relative;
+}
+
+.heroTitle {
+  margin-bottom: 36px;
+  line-height: 1.08;
+  word-spacing: -0.04em;
+}
+
+/* Overeenkomstig met h1 em op andere pagina's */
+.salmonItalic {
+  background: linear-gradient(135deg, var(--zalm) 0%, var(--zalm-donker) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Zalm accentband onder hero ── */
+.home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--zalm) 0%, var(--zalm-licht) 60%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── Foto kolom ── */
+.homePhoto {
+  position: relative;
+  background: var(--creme-warm);
+  overflow: hidden;
+  min-height: calc(100vh - 84px);
+}
+.homePhoto img {
+  object-position: center 30% !important;
+}
+
+@media (max-width: 900px) {
+  .homePhoto { min-height: 480px; }
+  .homeText  { padding: 40px 5vw; }
+}
+
+/* ── Gradient fades: beeld lost op in achtergrond ── */
+.photoFadeLeft {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 28%;
+  background: linear-gradient(to right, var(--creme-warm) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photoFadeRight {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 18%;
+  background: linear-gradient(to left, var(--creme-warm) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.photoFadeBottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to top, var(--creme-warm) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}

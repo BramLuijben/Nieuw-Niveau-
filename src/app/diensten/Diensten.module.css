@@ -1,0 +1,178 @@
+.page {
+  background: linear-gradient(180deg, var(--creme) 0%, var(--creme-warm) 100%);
+  overflow: hidden;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  top: 200px; left: 50%;
+  width: 500px; height: 500px;
+  background: var(--zalm-cream);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.dienstenIntro {
+  font-size: 16px;
+  max-width: 60ch;
+  color: var(--grijs);
+  margin-bottom: 40px;
+  line-height: 1.65;
+}
+
+/* Vier kaarten naast elkaar */
+.dienstenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+}
+@media (max-width: 1100px) { .dienstenGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .dienstenGrid { grid-template-columns: 1fr; } }
+
+.dienstCard {
+  padding: 24px 22px;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.dienstCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(201,110,85,0.13);
+}
+.secondary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--zalm) 0%, var(--zalm-donker) 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.primary {
+  background: var(--zwart);
+  color: var(--wit);
+}
+.primary::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, var(--zalm) 0%, transparent 70%);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+.primary > * { position: relative; z-index: 1; }
+
+.secondary {
+  background: var(--wit);
+  border: 1px solid var(--rand);
+}
+
+.dienstNumRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dienstNum {
+  font-family: var(--font-fraunces);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  flex-shrink: 0;
+}
+.secondary .dienstNum {
+  background: var(--zalm-heel-licht);
+  color: var(--zalm-donker);
+}
+
+.dienstTitle     { font-size: 17px; color: var(--wit); margin: 0; line-height: 1.25; }
+.dienstTitleDark { font-size: 17px; color: var(--zwart); margin: 0; line-height: 1.25; }
+
+.dienstDesc     { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.78); margin: 0; }
+.dienstDescDark { font-size: 14px; line-height: 1.65; color: var(--zwart-zacht); margin: 0; }
+
+.dienstFeatures {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dienstFeature {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.72);
+}
+.dienstFeature::before {
+  content: '✓';
+  color: var(--zalm-licht);
+  font-weight: 700;
+}
+
+.dienstStatus {
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.secondary .dienstStatus {
+  background: var(--creme-warm);
+  color: var(--grijs);
+}
+.dienstStatus::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #F5A623;
+  flex-shrink: 0;
+}
+
+/* Kenmerken pills */
+.kenmerkenRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+.kenmerk {
+  padding: 8px 16px;
+  background: var(--wit);
+  border: 1px solid var(--rand);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--zwart);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.kenmerk::before {
+  content: '✓';
+  color: var(--zalm-donker);
+  font-weight: 700;
+  font-size: 12px;
+}

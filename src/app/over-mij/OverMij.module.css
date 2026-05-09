@@ -1,0 +1,272 @@
+.page {
+  background: var(--creme);
+  overflow: hidden;
+}
+.page::before {
+  content: '';
+  position: absolute;
+  top: 10%; right: -200px;
+  width: 500px; height: 500px;
+  background: var(--zalm-cream);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.heroSubtitel {
+  font-family: var(--font-fraunces);
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--zwart);
+  margin: 16px 0 28px;
+  line-height: 1.2;
+}
+
+.overGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 24px;
+}
+@media (max-width: 900px) { .overGrid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* ── Portret ── */
+
+.portraitStage {
+  position: relative;
+  width: 320px;
+  background: var(--creme);
+}
+
+.portraitWrap {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: var(--creme);
+}
+
+/* Decoratieve cirkels rond portret */
+.portraitCircleBack {
+  position: absolute;
+  width: 88%;
+  aspect-ratio: 1;
+  background: var(--zalm-heel-licht);
+  border-radius: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.portraitCircleAccent {
+  position: absolute;
+  width: 70px; height: 70px;
+  background: var(--zalm);
+  border-radius: 50%;
+  bottom: 80px;
+  right: -8px;
+  z-index: 4;
+  opacity: 0.72;
+}
+
+/* portraitBottomFade verwijderd — geen gradient overlay op portretfoto */
+
+/* Badge — buiten overflow:hidden, onderaan de stage */
+.portraitBadge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 4;
+  background: var(--wit);
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+.badgeName {
+  font-family: var(--font-fraunces);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--zwart);
+  line-height: 1;
+}
+.badgeRole {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--zalm-donker);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Tekst kolom */
+.subtitel {
+  font-family: var(--font-fraunces);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--zalm-donker);
+  margin-bottom: 16px !important;
+}
+.overText p { font-size: 15px; line-height: 1.7; color: var(--zwart-zacht); }
+.overText p + p { margin-top: 10px; }
+
+.factsRow {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  background: var(--wit);
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--zwart);
+  border: 1px solid var(--rand);
+  font-weight: 500;
+}
+.factIcon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--zalm-heel-licht);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--zalm-donker);
+}
+.factIcon svg { width: 12px; height: 12px; }
+
+.quoteBlock {
+  margin-top: 20px;
+  padding: 22px 26px;
+  background: var(--wit);
+  border-radius: 12px;
+  border-left: 3px solid var(--zalm);
+  position: relative;
+}
+.quoteBlock::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 16px;
+  font-family: var(--font-fraunces);
+  font-size: 70px;
+  color: var(--zalm);
+  line-height: 1;
+  opacity: 0.4;
+}
+.quoteBlock p {
+  font-family: var(--font-fraunces);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--zwart);
+  margin: 0;
+}
+
+/* Methodieken */
+.methodiekenSection {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rand);
+}
+.methodiekenSection h2 { margin-bottom: 16px; }
+
+.methodiekenIntro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--zwart-zacht);
+  max-width: 72ch;
+  margin-bottom: 12px !important;
+}
+
+.methodiekenGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.methodiekPill {
+  padding: 9px 18px;
+  background: var(--wit);
+  border: 1.5px solid var(--rand);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--zwart);
+  transition: all 0.2s;
+}
+.methodiekPill:hover {
+  border-color: var(--zalm);
+  background: var(--zalm-heel-licht);
+  color: var(--zalm-donker);
+}
+
+/* Reviews */
+.reviewsSection {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rand);
+}
+.reviewsHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.reviewsHeaderIcon {
+  width: 32px; height: 32px;
+  background: var(--zalm);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.reviewsLabel {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--zalm-donker);
+  font-weight: 600;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 800px) { .reviewsGrid { grid-template-columns: 1fr; } }
+
+.review {
+  padding: 22px 20px;
+  background: var(--wit);
+  border-radius: 12px;
+  border: 1px solid var(--rand);
+  transition: all 0.3s;
+  height: 100%;
+}
+.review:hover { transform: translateY(-3px); border-color: var(--zalm); }
+
+.reviewQuoteMark {
+  color: var(--zalm);
+  font-family: var(--font-fraunces);
+  font-size: 38px;
+  line-height: 0.6;
+  opacity: 0.6;
+  margin-bottom: 6px;
+  display: block;
+}
+.review p {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--zwart-zacht);
+  margin: 0;
+}
