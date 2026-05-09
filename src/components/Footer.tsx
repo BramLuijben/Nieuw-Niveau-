@@ -13,7 +13,7 @@ export default function Footer() {
       <span aria-hidden>·</span>
       <Link href="/algemene-voorwaarden">Algemene voorwaarden</Link>
       <span aria-hidden>·</span>
-      <a href="/Klachtenregeling.docx" download>Klachtenregeling</a>
+      <Link href="/klachtenformulier">Klachtenformulier</Link>
     </footer>
   )
 }

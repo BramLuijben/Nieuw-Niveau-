@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MotionLink } from '@/components/Animate'
 import styles from './Home.module.css'
@@ -78,19 +77,16 @@ export default function HomeContent() {
         </motion.div>
       </div>
 
-      {/* ── Rechterkant: foto met fade ── */}
-      <div className={styles.homePhoto}>
-        <Image
-          src="/images/hero.png"
-          alt="Nieuw Niveau ambulante begeleiding"
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
-          sizes="(max-width: 900px) 100vw, 50vw"
-        />
-        <div className={styles.photoFadeLeft} />
-        <div className={styles.photoFadeRight} />
-        <div className={styles.photoFadeBottom} />
+      {/* ── Rechterkant: geanimeerde bollen ── */}
+      <div className={styles.heroBlobScene}>
+        <div className={styles.blob1} />
+        <div className={styles.blob2} />
+        <div className={styles.blob3} />
+        <div className={styles.blob4} />
+        <div className={styles.blob5} />
+        <div className={styles.blob6} />
+        <div className={styles.blob7} />
+        <div className={styles.blobFadeLeft} />
       </div>
     </main>
   )

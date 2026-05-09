@@ -91,7 +91,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error('Contact API error:', err)
-    return NextResponse.json({ error: 'Er is iets misgegaan' }, { status: 500 })
+    const msg = err instanceof Error ? err.message : JSON.stringify(err)
+    const stack = err instanceof Error ? err.stack : undefined
+    console.error('[contact] send failed:', msg)
+    if (stack) console.error('[contact] stack:', stack)
+    console.error('[contact] raw error:', err)
+    return NextResponse.json({ error: 'Er is iets misgegaan bij het versturen. Probeer het later opnieuw of mail info@nieuwniveau.nl.' }, { status: 500 })
   }
 }

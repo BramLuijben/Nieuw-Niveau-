@@ -30,7 +30,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--font-inter);
@@ -405,3 +405,13 @@ nav {
 .site-footer .fn { color: var(--zwart); font-weight: 500; }
 .site-footer a { color: var(--grijs); }
 .site-footer a:hover { color: var(--zalm-donker); }
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 24px 16px 32px;
+  }
+  .site-footer [aria-hidden] { display: none; }
+}

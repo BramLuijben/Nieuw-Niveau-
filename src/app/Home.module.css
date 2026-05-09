@@ -2,7 +2,7 @@
    HERO LAYOUT
 ══════════════════════════════════════ */
 .home {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 84px;
@@ -13,7 +13,7 @@
   .home {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: auto;
     padding-top: 84px;
   }
@@ -43,7 +43,6 @@
   word-spacing: -0.04em;
 }
 
-/* Overeenkomstig met h1 em op andere pagina's */
 .salmonItalic {
   background: linear-gradient(135deg, var(--zalm) 0%, var(--zalm-donker) 100%);
   -webkit-background-clip: text;
@@ -73,46 +72,164 @@
   pointer-events: none;
 }
 
-/* ── Foto kolom ── */
-.homePhoto {
+/* ══════════════════════════════════════
+   BLOB SCENE (rechter kolom)
+══════════════════════════════════════ */
+.heroBlobScene {
   position: relative;
-  background: var(--creme-warm);
+  background: linear-gradient(160deg, var(--creme-warm) 0%, #ebe0d4 55%, #e4d5c6 100%);
   overflow: hidden;
-  min-height: calc(100vh - 84px);
-}
-.homePhoto img {
-  object-position: center 30% !important;
+  min-height: calc(100dvh - 84px);
 }
 
-@media (max-width: 900px) {
-  .homePhoto { min-height: 480px; }
-  .homeText  { padding: 40px 5vw; }
-}
-
-/* ── Gradient fades: beeld lost op in achtergrond ── */
-.photoFadeLeft {
+/* Fade links: bollen lopen vloeiend over in tekst-achtergrond */
+.blobFadeLeft {
   position: absolute;
   left: 0; top: 0; bottom: 0;
-  width: 28%;
+  width: 32%;
   background: linear-gradient(to right, var(--creme-warm) 0%, transparent 100%);
-  z-index: 2;
+  z-index: 10;
   pointer-events: none;
 }
 
-.photoFadeRight {
-  position: absolute;
-  right: 0; top: 0; bottom: 0;
-  width: 18%;
-  background: linear-gradient(to left, var(--creme-warm) 0%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+/* ── Keyframe animaties ── */
+@keyframes float1 {
+  from { transform: translate(0px,   0px)  scale(1);    }
+  to   { transform: translate(12px, -22px) scale(1.05); }
+}
+@keyframes float2 {
+  from { transform: translate(0px,  0px)  scale(1);    }
+  to   { transform: translate(-18px, 14px) scale(0.96); }
+}
+@keyframes float3 {
+  from { transform: translate(0px,  0px)  scale(1)    rotate(0deg); }
+  to   { transform: translate(8px, -16px) scale(1.08) rotate(4deg); }
+}
+@keyframes float4 {
+  from { transform: translate(0px,  0px)   scale(1);    }
+  to   { transform: translate(-10px, 20px) scale(1.04); }
+}
+@keyframes float5 {
+  from { transform: translate(0px,  0px)  scale(1);    }
+  to   { transform: translate(16px, -10px) scale(0.94); }
+}
+@keyframes float6 {
+  from { transform: translate(0px, 0px)  scale(1);    }
+  to   { transform: translate(-8px, 18px) scale(1.06); }
+}
+@keyframes float7 {
+  from { transform: translate(0px,  0px)  scale(1);    }
+  to   { transform: translate(14px, 12px) scale(0.92); }
 }
 
-.photoFadeBottom {
+/* ── Individuele bollen ── */
+
+/* Bol 1 — groot, teal, achtergrond */
+.blob1 {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 45%;
-  background: linear-gradient(to top, var(--creme-warm) 0%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, var(--teal-licht), var(--teal));
+  top: -8%; right: 5%;
+  filter: blur(80px);
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+  animation: float1 12s ease-in-out infinite alternate;
+}
+
+/* Bol 2 — groot, salmon, midden */
+.blob2 {
+  position: absolute;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 55%, var(--zalm-licht), var(--zalm));
+  top: 25%; right: -5%;
+  filter: blur(55px);
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+  animation: float2 10s ease-in-out infinite alternate;
+  animation-delay: -2s;
+}
+
+/* Bol 3 — middel, creme, bottom-right */
+.blob3 {
+  position: absolute;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--creme-donker), var(--zalm-heel-licht));
+  bottom: 5%; right: 8%;
+  filter: blur(35px);
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+  animation: float3 14s ease-in-out infinite alternate;
+  animation-delay: -4s;
+}
+
+/* Bol 4 — middel, teal-donker, midden-links */
+.blob4 {
+  position: absolute;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #2a4f4f, #1a3535);
+  top: 45%; right: 44%;
+  filter: blur(50px);
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  animation: float4 9s ease-in-out infinite alternate;
+  animation-delay: -1s;
+}
+
+/* Bol 5 — klein, salmon-licht, top-links */
+.blob5 {
+  position: absolute;
+  width: 170px; height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--zalm-licht), var(--zalm));
+  top: 12%; right: 42%;
+  filter: blur(20px);
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+  animation: float5 8s ease-in-out infinite alternate;
+  animation-delay: -3s;
+}
+
+/* Bol 6 — klein, cream-licht, bottom-links */
+.blob6 {
+  position: absolute;
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  background: var(--zalm-cream);
+  bottom: 22%; right: 37%;
+  filter: blur(15px);
+  opacity: 0.9;
+  animation: float6 11s ease-in-out infinite alternate;
+  animation-delay: -5s;
+}
+
+/* Bol 7 — accent, salmon-donker */
+.blob7 {
+  position: absolute;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: var(--zalm-donker);
+  top: 60%; right: 51%;
+  filter: blur(22px);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  animation: float7 7s ease-in-out infinite alternate;
+  animation-delay: -6s;
+}
+
+/* ── Mobiel ── */
+@media (max-width: 900px) {
+  .heroBlobScene { min-height: 300px; }
+  .homeText      { padding: 40px 5vw; }
+
+  .blob1 { width: 260px; height: 260px; }
+  .blob2 { width: 220px; height: 220px; }
+  .blob3 { width: 180px; height: 180px; }
+  .blob4 { width: 160px; height: 160px; }
+  .blob5 { width: 110px; height: 110px; }
+  .blob6 { width:  90px; height:  90px; }
+  .blob7 { width:  80px; height:  80px; }
 }
