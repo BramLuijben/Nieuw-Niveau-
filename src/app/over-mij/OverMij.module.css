@@ -2,16 +2,52 @@
   background: var(--creme);
   overflow: hidden;
 }
-.page::before {
-  content: '';
+
+/* ── Decoratieve bollen rechtsboven ── */
+.cornerBlobs {
   position: absolute;
-  top: 10%; right: -200px;
-  width: 500px; height: 500px;
-  background: var(--zalm-cream);
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.5;
+  top: 84px;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
   z-index: 0;
+}
+
+.cornerBlob1 {
+  position: absolute;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, var(--teal-licht), var(--teal));
+  top: 0; right: -30px;
+  opacity: 0.70;
+}
+
+.cornerBlob2 {
+  position: absolute;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--zalm-licht), var(--zalm));
+  top: 80px; right: 100px;
+  opacity: 0.82;
+}
+
+.cornerBlob3 {
+  position: absolute;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--zalm-donker);
+  top: 20px; right: 130px;
+  opacity: 0.68;
+}
+
+.cornerBlob4 {
+  position: absolute;
+  width: 55px; height: 55px;
+  border-radius: 50%;
+  background: var(--zalm-heel-licht);
+  top: 150px; right: 20px;
+  opacity: 0.90;
 }
 
 .heroSubtitel {
@@ -208,6 +244,75 @@
   border-color: var(--zalm);
   background: var(--zalm-heel-licht);
   color: var(--zalm-donker);
+}
+
+/* ── Missie & Visie ── */
+.missieVisieSection {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rand);
+}
+
+.missieVisieHeader {
+  margin-bottom: 28px;
+}
+
+.missieVisieGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 700px) { .missieVisieGrid { grid-template-columns: 1fr; } }
+
+.missieVisieCard {
+  background: var(--wit);
+  border: 1px solid var(--rand);
+  border-radius: 16px;
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.missieVisieCard:hover { border-color: var(--zalm); }
+.missieVisieCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--zalm) 0%, var(--zalm-donker) 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.missieVisieIcon {
+  font-size: 22px;
+  color: var(--zalm);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.missieVisieLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--zalm-donker);
+  margin-bottom: 10px;
+}
+
+.missieVisieTitel {
+  font-family: var(--font-fraunces);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--teal);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.missieVisieTekst {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--zwart-zacht);
+  margin: 0;
 }
 
 /* Reviews */

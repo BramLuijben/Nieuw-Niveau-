@@ -10,10 +10,35 @@ const reviews = [
   'Nieuwe mensen ontmoeten vond ik spannend en overweldigend. Bram hielp me dit aan te pakken op mijn tempo.',
 ]
 
+const missieVisie = [
+  {
+    label: 'Missie',
+    icon: '◎',
+    titel: 'Vastlopen omzetten in beweging',
+    tekst:
+      'Wij ondersteunen mensen die vastlopen bij het hervinden van hun richting — op een manier die aansluit bij wie zij zijn en wat zij willen bereiken. Niet door het over te nemen, maar door naast iemand te staan en samen stap voor stap verder te gaan.',
+  },
+  {
+    label: 'Visie',
+    icon: '◈',
+    titel: 'Anders zijn is een kracht',
+    tekst:
+      'Wij geloven dat ieder mens het vermogen heeft om te groeien. Dat "anders zijn" geen belemmering is, maar een eigenschap die gewaardeerd mag worden. Goede begeleiding begint bij oprechte aandacht en het vertrouwen dat de ander zelf weet wat hij nodig heeft.',
+  },
+]
 
 export default function OverMijContent() {
   return (
     <main className={`page ${styles.page}`}>
+
+      {/* Decoratieve bollen rechtsboven */}
+      <div className={styles.cornerBlobs} aria-hidden="true">
+        <div className={styles.cornerBlob1} />
+        <div className={styles.cornerBlob2} />
+        <div className={styles.cornerBlob3} />
+        <div className={styles.cornerBlob4} />
+      </div>
+
       <div className="page-inner">
         <FadeIn delay={0.05}>
           <div className="eyebrow"><span className="eyebrow-num">03</span> Over ons</div>
@@ -27,7 +52,6 @@ export default function OverMijContent() {
         <div className={styles.overGrid}>
           <FadeIn delay={0.15} from="left">
             <div className={styles.portraitStage}>
-              {/* Portretframe */}
               <div className={styles.portraitWrap}>
                 <Image
                   src="/images/bram.jpeg"
@@ -38,8 +62,6 @@ export default function OverMijContent() {
                   priority
                 />
               </div>
-
-              {/* Badge buiten overflow:hidden container */}
               <div className={styles.portraitBadge}>
                 <div className={styles.badgeName}>Bram Luijben</div>
                 <div className={styles.badgeRole}>Oprichter &amp; Ambulant begeleider</div>
@@ -59,7 +81,6 @@ export default function OverMijContent() {
               <p>
                 In zeven jaar binnen de GGZ werkte hij in uiteenlopende functies — van begeleide woonvormen tot ambulante trajecten — en bouwde hij een brede kennis en ervaring op. Naast zijn werk heeft Bram een persoonlijke interesse in gezondheid, voeding en sport, waar hij binnen het kader van zijn beroep cliënten passend en effectief weet te helpen.
               </p>
-
               <div className={styles.quoteBlock}>
                 <p>
                   &ldquo;Ik vind het bijzonder om te zien hoe juist het &lsquo;anders-zijn&rsquo; een kracht kan zijn. Dat het niet veranderd, maar gewaardeerd mag worden. Met oog voor wat iemand zelf belangrijk vindt.&rdquo;
@@ -68,6 +89,29 @@ export default function OverMijContent() {
             </div>
           </FadeIn>
         </div>
+
+        {/* Missie & Visie */}
+        <FadeIn delay={0.1}>
+          <div className={styles.missieVisieSection}>
+            <div className={styles.missieVisieHeader}>
+              <div className="eyebrow" style={{ marginBottom: 0 }}>
+                <span className="eyebrow-num">✦</span> Missie &amp; Visie
+              </div>
+            </div>
+            <Stagger className={styles.missieVisieGrid} stagger={0.12}>
+              {missieVisie.map((item) => (
+                <StaggerItem key={item.label}>
+                  <div className={styles.missieVisieCard}>
+                    <div className={styles.missieVisieIcon}>{item.icon}</div>
+                    <div className={styles.missieVisieLabel}>{item.label}</div>
+                    <h3 className={styles.missieVisieTitel}>{item.titel}</h3>
+                    <p className={styles.missieVisieTekst}>{item.tekst}</p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </FadeIn>
 
         {/* Reviews */}
         <FadeIn delay={0.1}>

@@ -74,126 +74,69 @@
   min-height: calc(100dvh - 84px);
 }
 
-/* ── Keyframe animaties ── */
-@keyframes float1 {
-  from { transform: translate(0px,   0px)  scale(1);    }
-  to   { transform: translate(12px, -22px) scale(1.05); }
-}
-@keyframes float2 {
-  from { transform: translate(0px,  0px)   scale(1);    }
-  to   { transform: translate(-18px, 14px) scale(0.96); }
-}
-@keyframes float3 {
-  from { transform: translate(0px,  0px)   scale(1)    rotate(0deg); }
-  to   { transform: translate(8px, -16px)  scale(1.08) rotate(4deg); }
-}
-@keyframes float4 {
-  from { transform: translate(0px,  0px)   scale(1);    }
-  to   { transform: translate(-10px, 20px) scale(1.04); }
-}
-@keyframes float5 {
-  from { transform: translate(0px,  0px)   scale(1);    }
-  to   { transform: translate(16px, -10px) scale(0.94); }
-}
-@keyframes float6 {
-  from { transform: translate(0px,  0px)   scale(1);    }
-  to   { transform: translate(-8px,  18px) scale(1.06); }
-}
-@keyframes float7 {
-  from { transform: translate(0px,  0px)   scale(1);    }
-  to   { transform: translate(14px,  12px) scale(0.92); }
-}
+/* ── Individuele bollen — statisch, geen animatie ── */
 
-/* ── Individuele bollen ── */
-
-/* Bol 1 — groot, teal, achtergrond, loopt gedeeltelijk links weg */
 .blob1 {
   position: absolute;
   width: 440px; height: 440px;
   border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, var(--teal-licht), var(--teal));
+  background: radial-gradient(circle at 38% 38%, var(--teal-licht), var(--teal));
   top: -6%; right: 3%;
-  filter: blur(6px);
   opacity: 0.82;
-  animation: float1 12s ease-in-out infinite alternate;
 }
 
-/* Bol 2 — groot, salmon, midden-rechts */
 .blob2 {
   position: absolute;
   width: 380px; height: 380px;
   border-radius: 50%;
   background: radial-gradient(circle at 45% 55%, var(--zalm-licht), var(--zalm));
   top: 28%; right: -4%;
-  filter: blur(5px);
   opacity: 0.88;
-  animation: float2 10s ease-in-out infinite alternate;
-  animation-delay: -2s;
 }
 
-/* Bol 3 — middel, warm creme, bottom-right */
 .blob3 {
   position: absolute;
   width: 300px; height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, var(--creme-donker), var(--zalm-heel-licht));
+  background: radial-gradient(circle at 50% 50%, var(--zalm-heel-licht), var(--creme-donker));
   bottom: 2%; right: 6%;
-  filter: blur(4px);
   opacity: 0.95;
-  animation: float3 14s ease-in-out infinite alternate;
-  animation-delay: -4s;
 }
 
-/* Bol 4 — middel, teal, overlapt grens tekst/bollen */
 .blob4 {
   position: absolute;
   width: 260px; height: 260px;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 40%, #2a4f4f, #1a3535);
   top: 48%; right: 42%;
-  filter: blur(5px);
-  opacity: 0.70;
-  animation: float4 9s ease-in-out infinite alternate;
-  animation-delay: -1s;
+  opacity: 0.68;
 }
 
-/* Bol 5 — klein, salmon, top — steekt ook linkerkant in */
 .blob5 {
   position: absolute;
   width: 180px; height: 180px;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, var(--zalm-licht), var(--zalm));
   top: 10%; right: 40%;
-  filter: blur(3px);
   opacity: 0.90;
-  animation: float5 8s ease-in-out infinite alternate;
-  animation-delay: -3s;
 }
 
-/* Bol 6 — klein, salmon-licht accent */
 .blob6 {
   position: absolute;
   width: 140px; height: 140px;
   border-radius: 50%;
   background: var(--zalm-licht);
   bottom: 20%; right: 35%;
-  filter: blur(3px);
   opacity: 0.92;
-  animation: float6 11s ease-in-out infinite alternate;
-  animation-delay: -5s;
 }
 
-/* Bol 7 — accent, salmon-donker, levendige dot */
 .blob7 {
   position: absolute;
   width: 120px; height: 120px;
   border-radius: 50%;
   background: var(--zalm-donker);
   top: 62%; right: 50%;
-  filter: blur(3px);
   opacity: 0.78;
-  animation: float7 7s ease-in-out infinite alternate;
-  animation-delay: -6s;
 }
 
 /* ── Mobiel ── */
