@@ -1,161 +1,179 @@
-'use client'
-
-import { useState } from 'react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import styles from './Klachtenformulier.module.css'
 
-type Status = 'idle' | 'loading' | 'success' | 'error'
+export const metadata: Metadata = {
+  title: 'Klachtenregeling — Nieuw Niveau',
+  description: 'Klachtenregeling van Nieuw Niveau Begeleiding. Niet tevreden? Laat het ons weten.',
+  robots: { index: false },
+}
 
-export default function Klachtenformulier() {
-  const [status, setStatus] = useState<Status>('idle')
-  const [form, setForm] = useState({
-    naam: '',
-    email: '',
-    telefoon: '',
-    datum: '',
-    omschrijving: '',
-    oplossing: '',
-  })
+const stappen = [
+  {
+    num: '01',
+    titel: 'Bespreek het direct',
+    tekst:
+      'Bespreek uw onvrede eerst met uw begeleider. Veel zorgen lossen zich op in een open gesprek.',
+    link: null,
+  },
+  {
+    num: '02',
+    titel: 'Schriftelijke klacht',
+    tekst:
+      'Komt u er samen niet uit, dan kunt u uw klacht schriftelijk indienen via het contactformulier op deze website of per e-mail.',
+    link: { label: 'Naar het contactformulier', href: '/contact', extern: false },
+  },
+  {
+    num: '03',
+    titel: 'Onafhankelijke klachtenfunctionaris',
+    tekst:
+      'Wilt u een onafhankelijke bemiddelaar inschakelen? Dat kan kosteloos via Klachtenportaal Zorg, waarbij Nieuw Niveau Begeleiding is aangesloten.',
+    link: { label: 'www.klachtenportaalzorg.nl', href: 'https://www.klachtenportaalzorg.nl', extern: true },
+  },
+  {
+    num: '04',
+    titel: 'Geschilleninstantie',
+    tekst:
+      'Heeft de klachtafhandeling niet geleid tot een bevredigende oplossing? Dan kunt u het geschil voorleggen aan de erkende geschilleninstantie waarbij Nieuw Niveau Begeleiding is aangesloten.',
+    link: { label: 'www.zorggeschil.nl', href: 'https://www.zorggeschil.nl', extern: true },
+  },
+]
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('loading')
-
-    const bericht = [
-      `Datum incident: ${form.datum || 'Niet opgegeven'}`,
-      '',
-      `Omschrijving:`,
-      form.omschrijving,
-      '',
-      `Gewenste oplossing:`,
-      form.oplossing || 'Niet opgegeven',
-    ].join('\n')
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          naam: form.naam,
-          email: form.email,
-          telefoon: form.telefoon,
-          ik_ben: 'klacht',
-          bericht,
-        }),
-      })
-      setStatus(res.ok ? 'success' : 'error')
-    } catch {
-      setStatus('error')
-    }
-  }
-
+export default function Klachtenregeling() {
   return (
-    <main className={`page ${styles.page}`}>
-      <div className="page-inner" style={{ maxWidth: '720px' }}>
-        <div className="eyebrow">
-          <span className="eyebrow-num">⚑</span> Klachtenformulier
+    <main className="page" style={{ background: 'var(--creme)' }}>
+      <div className="page-inner" style={{ maxWidth: '760px' }}>
+
+        <div className="eyebrow" style={{ marginBottom: '18px' }}>
+          <span className="eyebrow-num">⚑</span> Klachtenregeling
         </div>
 
-        <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', marginBottom: '12px' }}>
-          Een klacht <em>indienen</em>
+        <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', marginBottom: '12px' }}>
+          Niet tevreden? <em>Laat het ons weten.</em>
         </h1>
-        <p className={styles.intro}>
-          Nieuw Niveau Begeleiding hecht waarde aan goede zorg. Heeft u een klacht? Vul het formulier hieronder in. Wij nemen uw klacht serieus en streven ernaar binnen 5 werkdagen te reageren.
+
+        <p style={{
+          fontSize: '16px',
+          color: 'var(--grijs)',
+          maxWidth: '52ch',
+          marginBottom: '48px',
+          lineHeight: '1.65',
+        }}>
+          Wij nemen uw klacht serieus en behandelen deze vertrouwelijk.
         </p>
 
-        <div className={styles.infoBlock}>
-          <strong>Klachtenregeling conform Wkkgz</strong>
-          <p>U kunt ook direct contact opnemen via <a href="mailto:info@nieuwniveau.nl">info@nieuwniveau.nl</a> of <a href="tel:+31629242833">+31 6 29 24 28 33</a>.</p>
-          <a href="/Klachtenregeling.docx" download className={styles.downloadBtn}>
-            ↓ Download klachtenregeling (.docx)
-          </a>
+        {/* Stappen */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '48px' }}>
+          {stappen.map((s) => (
+            <div
+              key={s.num}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '56px 1fr',
+                gap: '0 24px',
+                background: 'var(--wit)',
+                border: '1px solid var(--rand)',
+                borderRadius: '16px',
+                padding: '24px 28px',
+                alignItems: 'start',
+              }}
+            >
+              {/* Nummerkolom */}
+              <div style={{
+                fontFamily: 'var(--font-fraunces)',
+                fontSize: '28px',
+                fontWeight: 400,
+                color: 'var(--zalm)',
+                lineHeight: 1,
+                paddingTop: '4px',
+              }}>
+                {s.num}
+              </div>
+
+              {/* Inhoud */}
+              <div>
+                <h3 style={{
+                  fontFamily: 'var(--font-fraunces)',
+                  fontSize: '18px',
+                  fontWeight: 500,
+                  color: 'var(--teal)',
+                  marginBottom: '8px',
+                }}>
+                  {s.titel}
+                </h3>
+                <p style={{
+                  fontSize: '15px',
+                  lineHeight: '1.65',
+                  color: 'var(--zwart-zacht)',
+                  margin: 0,
+                }}>
+                  {s.tekst}
+                </p>
+                {s.link && (
+                  s.link.extern ? (
+                    <a
+                      href={s.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        marginTop: '12px',
+                        fontSize: '14px',
+                        fontWeight: 500,
+                        color: 'var(--zalm-donker)',
+                        textDecoration: 'underline',
+                        textUnderlineOffset: '3px',
+                      }}
+                    >
+                      {s.link.label} ↗
+                    </a>
+                  ) : (
+                    <Link
+                      href={s.link.href}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        marginTop: '12px',
+                        fontSize: '14px',
+                        fontWeight: 500,
+                        color: 'var(--zalm-donker)',
+                        textDecoration: 'underline',
+                        textUnderlineOffset: '3px',
+                      }}
+                    >
+                      {s.link.label} →
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {status === 'success' ? (
-          <div className={styles.successCard}>
-            <div className={styles.successIcon}>✓</div>
-            <h3>Klacht ontvangen</h3>
-            <p>Bedankt voor uw melding. U ontvangt een bevestiging per e-mail. Wij reageren zo spoedig mogelijk, uiterlijk binnen 5 werkdagen.</p>
-            <Link href="/" className="btn-secondary" style={{ marginTop: '8px' }}>← Terug naar home</Link>
-          </div>
-        ) : (
-          <form className={styles.form} onSubmit={handleSubmit}>
+        {/* Vertrouwelijkheid */}
+        <div style={{
+          background: 'var(--zalm-heel-licht)',
+          borderLeft: '3px solid var(--zalm)',
+          borderRadius: '0 10px 10px 0',
+          padding: '16px 20px',
+          fontSize: '14px',
+          color: 'var(--zwart-zacht)',
+          lineHeight: '1.65',
+          marginBottom: '36px',
+        }}>
+          Uw klacht wordt vertrouwelijk behandeld en geanonimiseerd geregistreerd ten behoeve van kwaliteitsverbetering.
+        </div>
 
-            <div className={styles.row}>
-              <div className={styles.group}>
-                <label htmlFor="naam">Naam *</label>
-                <input
-                  id="naam" type="text" required
-                  placeholder="Uw volledige naam"
-                  value={form.naam}
-                  onChange={e => setForm({ ...form, naam: e.target.value })}
-                />
-              </div>
-              <div className={styles.group}>
-                <label htmlFor="datum">Datum incident <span className={styles.optional}>(optioneel)</span></label>
-                <input
-                  id="datum" type="date"
-                  value={form.datum}
-                  onChange={e => setForm({ ...form, datum: e.target.value })}
-                />
-              </div>
-            </div>
+        {/* Download + terug */}
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <a href="/Klachtenregeling.docx" download className="btn-primary">
+            ↓ Download klachtenregeling
+          </a>
+          <Link href="/" className="btn-secondary">← Terug naar home</Link>
+        </div>
 
-            <div className={styles.row}>
-              <div className={styles.group}>
-                <label htmlFor="email">E-mailadres *</label>
-                <input
-                  id="email" type="email" required
-                  placeholder="uw@email.nl"
-                  value={form.email}
-                  onChange={e => setForm({ ...form, email: e.target.value })}
-                />
-              </div>
-              <div className={styles.group}>
-                <label htmlFor="telefoon">Telefoonnummer <span className={styles.optional}>(optioneel)</span></label>
-                <input
-                  id="telefoon" type="tel"
-                  placeholder="+31 6 ..."
-                  value={form.telefoon}
-                  onChange={e => setForm({ ...form, telefoon: e.target.value })}
-                />
-              </div>
-            </div>
-
-            <div className={styles.group}>
-              <label htmlFor="omschrijving">Omschrijving van de klacht *</label>
-              <textarea
-                id="omschrijving" required rows={5}
-                placeholder="Beschrijf zo concreet mogelijk wat er is gebeurd..."
-                value={form.omschrijving}
-                onChange={e => setForm({ ...form, omschrijving: e.target.value })}
-              />
-            </div>
-
-            <div className={styles.group}>
-              <label htmlFor="oplossing">Gewenste oplossing <span className={styles.optional}>(optioneel)</span></label>
-              <textarea
-                id="oplossing" rows={3}
-                placeholder="Wat zou voor u een passende oplossing zijn?"
-                value={form.oplossing}
-                onChange={e => setForm({ ...form, oplossing: e.target.value })}
-              />
-            </div>
-
-            {status === 'error' && (
-              <p className={styles.errorMsg}>
-                Er is iets misgegaan. Probeer het opnieuw of stuur een e-mail naar <a href="mailto:info@nieuwniveau.nl">info@nieuwniveau.nl</a>.
-              </p>
-            )}
-
-            <div className={styles.actions}>
-              <button type="submit" className="btn-primary" disabled={status === 'loading'}>
-                {status === 'loading' ? 'Verzenden...' : 'Klacht indienen →'}
-              </button>
-              <Link href="/" className="btn-secondary">Annuleren</Link>
-            </div>
-          </form>
-        )}
       </div>
     </main>
   )
