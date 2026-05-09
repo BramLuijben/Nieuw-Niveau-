@@ -77,19 +77,13 @@ export default function HomeContent() {
         </motion.div>
       </div>
 
-      {/* ── Rechterkant: bollen in drie lagen ── */}
+      {/* ── Visuele kolom ── */}
       <div className={styles.heroBlobScene}>
-        {/* Laag 1 — atmosfeer */}
-        <div className={styles.blobAtmos1} />
-        <div className={styles.blobAtmos2} />
-        {/* Laag 2 — zichtbare cirkels */}
-        <div className={styles.blobMid1} />
-        <div className={styles.blobMid2} />
-        <div className={styles.blobMid3} />
-        {/* Laag 3 — scherpe accenten */}
-        <div className={styles.blobAccent1} />
-        <div className={styles.blobAccent2} />
-        <div className={styles.blobAccent3} />
+        <div className={styles.blobGlow} />
+        <div className={styles.blobA} />
+        <div className={styles.blobB} />
+        <div className={styles.blobC} />
+        <div className={styles.blobD} />
       </div>
     </main>
   )

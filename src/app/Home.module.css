@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════
-   HERO LAYOUT — één achtergrondkleur
+   HERO LAYOUT
 ══════════════════════════════════════ */
 .home {
   min-height: 100dvh;
@@ -7,13 +7,11 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 84px;
   position: relative;
-  background: var(--creme);
 }
 
 @media (max-width: 900px) {
   .home {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
     min-height: 100dvh;
     height: auto;
     padding-top: 84px;
@@ -26,6 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: var(--creme);
   position: relative;
   z-index: 1;
 }
@@ -34,16 +33,6 @@
   margin-bottom: 36px;
   line-height: 1.08;
   word-spacing: -0.04em;
-}
-
-.salmonItalic {
-  background: linear-gradient(135deg, var(--zalm) 0%, var(--zalm-donker) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-style: italic;
-  font-weight: 400;
-  display: inline-block;
 }
 
 .heroActions {
@@ -56,9 +45,7 @@
 .home::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0; left: 0; right: 0;
   height: 4px;
   background: linear-gradient(90deg, var(--zalm) 0%, var(--zalm-licht) 60%, transparent 100%);
   z-index: 10;
@@ -66,98 +53,63 @@
 }
 
 /* ══════════════════════════════════════
-   BLOB SCENE
-   Drie lagen: atmosfeer → structuur → accent
+   VISUELE KOLOM — warme achtergrond + 4 bollen
 ══════════════════════════════════════ */
 .heroBlobScene {
   position: relative;
+  background: #ece0d2;
   overflow: hidden;
   min-height: calc(100dvh - 84px);
 }
 
-/* ── Laag 1: atmosfeer (groot, sterk geblurd, kleur-sfeer) ── */
-
-.blobAtmos1 {
+/* ── Sfeer: grote zachte gloed die de kleur zet ── */
+.blobGlow {
   position: absolute;
-  width: 520px; height: 520px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 45% 45%, var(--teal-licht), var(--teal));
-  top: -14%; right: -4%;
-  filter: blur(90px);
-  opacity: 0.38;
+  inset: -40px;
+  background:
+    radial-gradient(ellipse 70% 65% at 75% 40%, rgba(232, 146, 124, 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 55% at 30% 70%, rgba(26,  53,  53, 0.28) 0%, transparent 65%);
+  pointer-events: none;
 }
 
-.blobAtmos2 {
+/* ── Bol A: groot teal, boven-rechts, deels buiten ── */
+.blobA {
   position: absolute;
-  width: 440px; height: 440px;
+  width: 360px; height: 360px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 55%, var(--zalm-licht), var(--zalm));
-  top: 32%; right: -8%;
-  filter: blur(72px);
-  opacity: 0.42;
+  background: radial-gradient(circle at 34% 30%, #3d7272, #0f2323);
+  top: -60px; right: -50px;
+  box-shadow: inset -18px -18px 40px rgba(0,0,0,0.18);
 }
 
-/* ── Laag 2: zichtbare cirkels (herkenbare vorm, zachte rand) ── */
-
-.blobMid1 {
+/* ── Bol B: groot salmon, midden, overlapt A ── */
+.blobB {
   position: absolute;
-  width: 300px; height: 300px;
+  width: 310px; height: 310px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 38%, var(--teal-licht), var(--teal));
-  top: 4%; right: 8%;
-  filter: blur(5px);
-  opacity: 0.82;
+  background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
+  top: 38%; right: 8%;
+  box-shadow: inset -14px -14px 32px rgba(0,0,0,0.14);
 }
 
-.blobMid2 {
+/* ── Bol C: klein creme-warm, raakt B aan linksonder ── */
+.blobC {
   position: absolute;
-  width: 260px; height: 260px;
+  width: 180px; height: 180px;
   border-radius: 50%;
-  background: radial-gradient(circle at 48% 52%, var(--zalm-licht), var(--zalm));
-  top: 35%; right: -2%;
-  filter: blur(4px);
-  opacity: 0.86;
+  background: radial-gradient(circle at 38% 34%, #f8efe4, #ddd0c0);
+  bottom: 12%; right: 28%;
+  box-shadow: inset -8px -8px 18px rgba(0,0,0,0.10);
 }
 
-.blobMid3 {
+/* ── Bol D: kleine donkere dot voor ritme ── */
+.blobD {
   position: absolute;
-  width: 220px; height: 220px;
+  width: 88px; height: 88px;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, var(--creme-donker), var(--zalm-heel-licht));
-  bottom: 8%; right: 14%;
-  filter: blur(4px);
-  opacity: 0.92;
-}
-
-/* ── Laag 3: accenten (scherp, voorgrond, detail) ── */
-
-.blobAccent1 {
-  position: absolute;
-  width: 130px; height: 130px;
-  border-radius: 50%;
-  background: var(--zalm-donker);
-  top: 52%; right: 34%;
-  filter: blur(2px);
-  opacity: 0.76;
-}
-
-.blobAccent2 {
-  position: absolute;
-  width: 95px; height: 95px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, #2a4f4f, #1a3535);
-  top: 16%; right: 44%;
-  filter: blur(2px);
-  opacity: 0.72;
-}
-
-.blobAccent3 {
-  position: absolute;
-  width: 68px; height: 68px;
-  border-radius: 50%;
-  background: var(--zalm-licht);
-  bottom: 22%; right: 8%;
-  opacity: 0.88;
+  background: radial-gradient(circle at 38% 36%, #2a5050, #0d2020);
+  bottom: 28%; right: 56%;
+  box-shadow: inset -5px -5px 12px rgba(0,0,0,0.20);
 }
 
 /* ── Mobiel ── */
@@ -165,12 +117,8 @@
   .heroBlobScene { min-height: 300px; }
   .homeText      { padding: 40px 5vw; }
 
-  .blobAtmos1 { width: 320px; height: 320px; }
-  .blobAtmos2 { width: 280px; height: 280px; }
-  .blobMid1   { width: 190px; height: 190px; }
-  .blobMid2   { width: 160px; height: 160px; }
-  .blobMid3   { width: 140px; height: 140px; }
-  .blobAccent1 { width: 85px; height: 85px; }
-  .blobAccent2 { width: 65px; height: 65px; }
-  .blobAccent3 { width: 48px; height: 48px; }
+  .blobA { width: 220px; height: 220px; top: -30px; right: -30px; }
+  .blobB { width: 190px; height: 190px; top: 35%;  right: 5%;   }
+  .blobC { width: 120px; height: 120px; }
+  .blobD { width:  58px; height:  58px; }
 }
