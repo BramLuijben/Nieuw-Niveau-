@@ -17,7 +17,7 @@ const sections = [
   {
     titel: 'Informatie over de begeleiding',
     tekst: [
-      "Vóór aanvang van de begeleiding informeert de begeleider de cliënt over de aard en het doel van de begeleiding, de te verwachten gevolgen en risico's, en eventuele alternatieven. De cliënt krijgt de gelegenheid vragen te stellen.",
+      'Vóór aanvang van de begeleiding informeert de begeleider de cliënt over de aard, het doel en de werkwijze van de ambulante begeleiding. De cliënt krijgt de gelegenheid vragen te stellen.',
     ],
   },
   {
@@ -35,13 +35,31 @@ const sections = [
   {
     titel: 'Dossier en bewaartermijn',
     tekst: [
-      'De begeleider legt een dossier aan met gegevens over de verleende begeleiding. Het dossier wordt bewaard gedurende twintig jaar na het laatste contact, of zoveel langer als redelijkerwijs noodzakelijk.',
+      'De begeleider legt een dossier aan met gegevens over de verleende begeleiding. Het dossier wordt bewaard gedurende de wettelijke bewaartermijn die geldt voor de verleende begeleiding, of zoveel langer als redelijkerwijs noodzakelijk.',
     ],
   },
   {
     titel: 'Inzagerecht',
     tekst: [
       'De cliënt heeft recht op inzage in en een kopie van zijn dossier. Een verzoek daartoe kan worden gedaan via info@nieuwniveau.nl.',
+    ],
+  },
+  {
+    titel: 'Beëindiging van de begeleiding',
+    tekst: [
+      'Zowel de cliënt als de begeleider kunnen de begeleiding beëindigen. Indien mogelijk wordt de beëindiging tijdig besproken.',
+    ],
+  },
+  {
+    titel: 'Afzegging van afspraken',
+    tekst: [
+      'Indien een afspraak niet kan doorgaan, verzoekt de begeleider de cliënt dit zo spoedig mogelijk door te geven.',
+    ],
+  },
+  {
+    titel: 'Financiering',
+    tekst: [
+      'De begeleiding vindt plaats op basis van de tussen partijen overeengekomen financieringsvorm, zoals Wmo, pgb of particuliere betaling.',
     ],
   },
   {

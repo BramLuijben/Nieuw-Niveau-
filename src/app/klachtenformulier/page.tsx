@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Klachtenregeling — Nieuw Niveau',
-  description: 'Klachtenregeling van Nieuw Niveau Begeleiding conform de Wkkgz.',
+  description: 'Klachtenregeling van Nieuw Niveau Begeleiding.',
   robots: { index: false },
 }
 
@@ -17,20 +17,8 @@ const stappen = [
   {
     num: '02',
     titel: 'Schriftelijke klacht',
-    tekst: 'Komt u er samen niet uit, dan kunt u uw klacht schriftelijk indienen via het contactformulier op deze website of per e-mail naar info@nieuwniveau.nl. Wij bevestigen ontvangst en reageren schriftelijk en gemotiveerd binnen 6 weken. Indien het onderzoek meer tijd vereist, wordt de termijn eenmalig met maximaal 4 weken verlengd. U wordt hierover vóór het verstrijken van de oorspronkelijke termijn schriftelijk geïnformeerd.',
+    tekst: 'Indien uw klacht niet in een gesprek kan worden opgelost, kunt u uw klacht schriftelijk indienen via het contactformulier op deze website of per e-mail naar info@nieuwniveau.nl. Wij bevestigen de ontvangst van uw klacht en reageren schriftelijk en gemotiveerd binnen 6 weken. Indien het onderzoek meer tijd vereist, kan deze termijn eenmaal met maximaal 4 weken worden verlengd. U wordt hierover vóór het verstrijken van de oorspronkelijke termijn schriftelijk geïnformeerd.',
     link: { label: 'Naar het contactformulier', href: '/contact', extern: false },
-  },
-  {
-    num: '03',
-    titel: 'Onafhankelijke klachtenfunctionaris',
-    tekst: 'Wilt u een onafhankelijke bemiddelaar inschakelen? Dat kan kosteloos via Klachtenportaal Zorg, waarbij Nieuw Niveau Begeleiding is aangesloten. De klachtenfunctionaris adviseert, verleent bijstand bij het formuleren van de klacht en onderzoekt of een minnelijke schikking mogelijk is.',
-    link: { label: 'www.klachtenportaalzorg.nl', href: 'https://www.klachtenportaalzorg.nl', extern: true },
-  },
-  {
-    num: '04',
-    titel: 'Geschilleninstantie',
-    tekst: 'Heeft de klachtafhandeling niet geleid tot een bevredigende oplossing? Dan kunt u het geschil kosteloos voorleggen aan de erkende geschilleninstantie waarbij Nieuw Niveau Begeleiding is aangesloten. De instantie geeft een bindend advies en kan een schadevergoeding toekennen van maximaal € 25.000. Uitspraak volgt binnen 6 maanden na indiening.',
-    link: { label: 'www.zorggeschil.nl', href: 'https://www.zorggeschil.nl', extern: true },
   },
 ]
 
@@ -133,7 +121,7 @@ export default function Klachtenregeling() {
           lineHeight: '1.65',
           marginBottom: '36px',
         }}>
-          Uw klacht wordt vertrouwelijk behandeld en geanonimiseerd geregistreerd ten behoeve van kwaliteitsverbetering.
+          Uw klacht wordt vertrouwelijk behandeld. Klachten kunnen geanonimiseerd worden geregistreerd ten behoeve van kwaliteitsverbetering.
         </div>
 
         {/* Download + terug */}

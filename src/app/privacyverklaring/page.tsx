@@ -48,14 +48,21 @@ export default function Privacyverklaring() {
               Gewone persoonsgegevens worden verwerkt op grond van de uitvoering van de begeleidingsovereenkomst en een wettelijke verplichting.
             </p>
             <p style={{ marginTop: '8px' }}>
-              Gezondheidsgegevens worden verwerkt omdat de verwerking noodzakelijk is voor het verlenen van gezondheidszorg of sociale diensten.
+              Bijzondere persoonsgegevens, waaronder gezondheidsgegevens en informatie over welzijn en zelfredzaamheid, worden uitsluitend verwerkt voor zover dat noodzakelijk is voor het verlenen van ambulante begeleiding en ondersteuning.
             </p>
           </section>
 
           <section>
             <Kop titel="Ontvangers" />
             <p>
-              Gegevens worden uitsluitend gedeeld met derden voor zover noodzakelijk en met uw toestemming, of indien een wettelijke verplichting daartoe bestaat. Denk aan verwijzers, gemeenten (in het kader van de Wmo) of andere zorgverleners betrokken bij uw begeleiding.
+              Gegevens worden uitsluitend gedeeld met derden voor zover dat noodzakelijk is voor de uitvoering van de begeleiding, indien daarvoor uw toestemming nodig is, of wanneer een wettelijke verplichting daartoe bestaat. Dit kan bijvoorbeeld gaan om verwijzers, gemeenten in het kader van de Wmo, of andere betrokken professionals of organisaties.
+            </p>
+          </section>
+
+          <section>
+            <Kop titel="Verwerkers" />
+            <p>
+              Voor de technische ondersteuning van onze dienstverlening maken wij gebruik van externe dienstverleners, zoals aanbieders van e-mail, hosting, digitale cliëntdossiers en administratiesystemen. Voor zover deze partijen in onze opdracht persoonsgegevens verwerken, sluiten wij met hen een verwerkersovereenkomst.
             </p>
           </section>
 
@@ -65,9 +72,16 @@ export default function Privacyverklaring() {
           </section>
 
           <section>
+            <Kop titel="Beveiliging" />
+            <p>
+              Wij nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies, onbevoegde toegang, misbruik of onrechtmatige verwerking.
+            </p>
+          </section>
+
+          <section>
             <Kop titel="Bewaartermijnen" />
             <p>
-              Het cliëntdossier wordt bewaard gedurende twintig jaar na het laatste contact, conform de wettelijke bewaartermijn. Andere persoonsgegevens worden niet langer bewaard dan noodzakelijk voor het doel waarvoor ze zijn verzameld.
+              Het cliëntdossier wordt bewaard gedurende de wettelijke bewaartermijn die geldt voor de verleende begeleiding. Andere persoonsgegevens worden niet langer bewaard dan noodzakelijk voor het doel waarvoor zij zijn verzameld.
             </p>
           </section>
 
@@ -128,8 +142,7 @@ export default function Privacyverklaring() {
           <section>
             <Kop titel="Elektronische gegevensuitwisseling" />
             <p>
-              U heeft het recht om toestemming te geven of te weigeren voor elektronische uitwisseling van uw gegevens met andere zorgverleners. U kunt hierover contact opnemen via{' '}
-              <a href="mailto:info@nieuwniveau.nl" style={{ color: 'var(--zalm-donker)' }}>info@nieuwniveau.nl</a>.
+              Indien elektronische uitwisseling van uw gegevens met andere betrokken professionals of organisaties aan de orde is, vragen wij daarvoor uw toestemming voor zover dat wettelijk vereist is. U kunt deze toestemming weigeren of later intrekken.
             </p>
           </section>
 
