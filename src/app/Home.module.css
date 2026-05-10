@@ -102,11 +102,11 @@
   pointer-events: none;
 }
 
-/* ── Mobiel ── */
+/* ── Mobiel-bollen (alleen telefoon) ── */
+.mobileBlobs { display: none; }
+
 @media (max-width: 900px) {
-  .homePhoto {
-    display: none;
-  }
+  .homePhoto { display: none; }
 
   .home {
     grid-template-columns: 1fr;
@@ -119,5 +119,36 @@
     justify-content: center;
     padding: 40px 6vw;
     min-height: 100dvh;
+  }
+
+  .mobileBlobs {
+    display: block;
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 260px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .mobileBlobs::before {
+    content: '';
+    position: absolute;
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
+    top: 55px; right: -42px;
+    opacity: 0.42;
+    filter: blur(10px);
+    box-shadow: inset -4px -4px 10px rgba(0,0,0,0.12);
+  }
+  .mobileBlobs::after {
+    content: '';
+    position: absolute;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #4d8585, #1a3535);
+    top: 148px; right: 22px;
+    opacity: 0.30;
+    filter: blur(8px);
+    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.14);
   }
 }

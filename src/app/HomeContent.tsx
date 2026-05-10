@@ -29,6 +29,7 @@ export default function HomeContent() {
     <main className={styles.home}>
       {/* ── Linkerkant: tekst ── */}
       <div className={styles.homeText}>
+        <div className={styles.mobileBlobs} aria-hidden="true" />
 
         <h1 className={`hero-title ${styles.heroTitle}`}>
           <motion.span

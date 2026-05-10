@@ -14,7 +14,7 @@ const reviews = [
 export default function OverMijContent() {
   return (
     <main className={`page ${styles.page}`}>
-
+      <div className={styles.mobileBlobs} aria-hidden="true" />
       <div className="page-inner">
         <FadeIn delay={0.05}>
           <div className="eyebrow"><span className="eyebrow-num">03</span> Over ons</div>

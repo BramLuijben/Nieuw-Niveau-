@@ -37,6 +37,7 @@ const kenmerken: string[] = []
 export default function DienstenContent() {
   return (
     <main className={`page ${styles.page}`}>
+      <div className={styles.mobileBlobs} aria-hidden="true" />
       <div className="page-inner">
         <FadeIn delay={0.05}>
           <div className="eyebrow"><span className="eyebrow-num">04</span> Diensten</div>
