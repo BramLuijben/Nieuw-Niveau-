@@ -51,10 +51,10 @@ export default function VoorWieContent() {
 
         <FadeIn delay={0.2} from="left">
           <div className={styles.introText}>
-            <p style={{ fontSize: '18px', lineHeight: '1.6', color: 'var(--zwart-zacht)', maxWidth: '58ch' }}>
+            <p style={{ fontSize: '16px', lineHeight: '1.6', color: 'var(--zwart-zacht)', maxWidth: '58ch' }}>
               Soms stapelt alles zich op — schulden, een rommelig huis, moeite met mensen, of een hoofd dat niet tot rust komt. Je weet dat er iets moet veranderen, maar je weet niet waar te beginnen.
             </p>
-            <p style={{ color: 'var(--zwart-zacht)' }}>
+            <p style={{ fontSize: '16px', lineHeight: '1.6', color: 'var(--zwart-zacht)' }}>
               Of je hebt het al zo vaak geprobeerd dat vertrouwen in hulp ver weg voelt. Toch kan het helpend zijn om er niet alleen voor te staan. Een begeleider die bij jou past helpt je daarbij — en daarvoor kun je bij ons terecht.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function VoorWieContent() {
         <FadeIn delay={0.1}>
           <div style={{ margin: '64px 0 20px' }}>
             <h2 style={{ fontSize: '22px', marginBottom: '6px' }}>Waar wij <em>goed in zijn</em></h2>
-            <p style={{ fontSize: '14px', color: 'var(--zwart-zacht)' }}>
+            <p style={{ fontSize: '16px', lineHeight: '1.6', color: 'var(--zwart-zacht)' }}>
               Herken je jouw situatie? Neem gerust contact op — we kijken samen wat mogelijk is.
             </p>
           </div>
