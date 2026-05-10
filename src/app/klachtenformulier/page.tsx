@@ -10,28 +10,24 @@ export const metadata: Metadata = {
 const stappen = [
   {
     num: '01',
-    wet: 'Wkkgz art. 13',
     titel: 'Bespreek het direct',
     tekst: 'Bespreek uw onvrede eerst met uw begeleider. Veel zorgen lossen zich op in een open gesprek.',
     link: null,
   },
   {
     num: '02',
-    wet: 'Wkkgz art. 13 lid 1',
     titel: 'Schriftelijke klacht',
     tekst: 'Komt u er samen niet uit, dan kunt u uw klacht schriftelijk indienen via het contactformulier op deze website of per e-mail naar info@nieuwniveau.nl. Wij bevestigen ontvangst en reageren schriftelijk en gemotiveerd binnen 6 weken. Indien het onderzoek meer tijd vereist, wordt de termijn eenmalig met maximaal 4 weken verlengd. U wordt hierover vóór het verstrijken van de oorspronkelijke termijn schriftelijk geïnformeerd.',
     link: { label: 'Naar het contactformulier', href: '/contact', extern: false },
   },
   {
     num: '03',
-    wet: 'Wkkgz art. 14',
     titel: 'Onafhankelijke klachtenfunctionaris',
     tekst: 'Wilt u een onafhankelijke bemiddelaar inschakelen? Dat kan kosteloos via Klachtenportaal Zorg, waarbij Nieuw Niveau Begeleiding is aangesloten. De klachtenfunctionaris adviseert, verleent bijstand bij het formuleren van de klacht en onderzoekt of een minnelijke schikking mogelijk is.',
     link: { label: 'www.klachtenportaalzorg.nl', href: 'https://www.klachtenportaalzorg.nl', extern: true },
   },
   {
     num: '04',
-    wet: 'Wkkgz art. 18–19',
     titel: 'Geschilleninstantie',
     tekst: 'Heeft de klachtafhandeling niet geleid tot een bevredigende oplossing? Dan kunt u het geschil kosteloos voorleggen aan de erkende geschilleninstantie waarbij Nieuw Niveau Begeleiding is aangesloten. De instantie geeft een bindend advies en kan een schadevergoeding toekennen van maximaal € 25.000. Uitspraak volgt binnen 6 maanden na indiening.',
     link: { label: 'www.zorggeschil.nl', href: 'https://www.zorggeschil.nl', extern: true },
@@ -80,7 +76,7 @@ export default function Klachtenregeling() {
 
               {/* Inhoud */}
               <div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', marginBottom: '6px', flexWrap: 'wrap' }}>
+                <div style={{ marginBottom: '6px' }}>
                   <h3 style={{
                     fontFamily: 'var(--font-fraunces)',
                     fontSize: '18px',
@@ -90,16 +86,6 @@ export default function Klachtenregeling() {
                   }}>
                     {s.titel}
                   </h3>
-                  <span style={{
-                    fontSize: '10px',
-                    fontWeight: 700,
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    color: 'var(--zalm-donker)',
-                    opacity: 0.8,
-                  }}>
-                    {s.wet}
-                  </span>
                 </div>
                 <p style={{ fontSize: '15px', lineHeight: '1.65', color: 'var(--zwart-zacht)', margin: 0 }}>
                   {s.tekst}
@@ -147,15 +133,11 @@ export default function Klachtenregeling() {
           lineHeight: '1.65',
           marginBottom: '36px',
         }}>
-          <strong style={{ color: 'var(--teal)', display: 'block', marginBottom: '4px', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Wkkgz art. 13 lid 1</strong>
           Uw klacht wordt vertrouwelijk behandeld en geanonimiseerd geregistreerd ten behoeve van kwaliteitsverbetering.
         </div>
 
         {/* Download + terug */}
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a href="/Klachtenregeling.docx" download className="btn-primary">
-            ↓ Download klachtenregeling
-          </a>
           <Link href="/" className="btn-secondary">← Terug naar home</Link>
         </div>
 

@@ -3,28 +3,12 @@
 import Image from 'next/image'
 import { FadeIn, Stagger, StaggerItem } from '@/components/Animate'
 import styles from './OverMij.module.css'
+import vwStyles from '../voor-wie/VoorWie.module.css'
 
 const reviews = [
   'Door samen met Bram te werken aan mijn administratie en financiën, kreeg ik meer ruimte in mijn hoofd — en kon ik weer genieten van de kleine dingen.',
   'Ons huis was jaren een bron van stress. Samen hebben we stap voor stap opgeruimd. Nu heb ik weer ruimte om thuis te zijn — en zelfs mijn hobby op te pakken.',
   'Nieuwe mensen ontmoeten vond ik spannend en overweldigend. Bram hielp me dit aan te pakken op mijn tempo.',
-]
-
-const missieVisie = [
-  {
-    label: 'Missie',
-    icon: '◎',
-    titel: 'Vastlopen omzetten in beweging',
-    tekst:
-      'Wij ondersteunen mensen die vastlopen bij het hervinden van hun richting — op een manier die aansluit bij wie zij zijn en wat zij willen bereiken. Niet door het over te nemen, maar door naast iemand te staan en samen stap voor stap verder te gaan.',
-  },
-  {
-    label: 'Visie',
-    icon: '◈',
-    titel: 'Anders zijn is een kracht',
-    tekst:
-      'Wij geloven dat ieder mens het vermogen heeft om te groeien. Dat "anders zijn" geen belemmering is, maar een eigenschap die gewaardeerd mag worden. Goede begeleiding begint bij oprechte aandacht en het vertrouwen dat de ander zelf weet wat hij nodig heeft.',
-  },
 ]
 
 export default function OverMijContent() {
@@ -92,26 +76,47 @@ export default function OverMijContent() {
 
         {/* Missie & Visie */}
         <FadeIn delay={0.1}>
-          <div className={styles.missieVisieSection}>
-            <div className={styles.missieVisieHeader}>
-              <div className="eyebrow" style={{ marginBottom: 0 }}>
-                <span className="eyebrow-num">✦</span> Missie &amp; Visie
-              </div>
-            </div>
-            <Stagger className={styles.missieVisieGrid} stagger={0.12}>
-              {missieVisie.map((item) => (
-                <StaggerItem key={item.label}>
-                  <div className={styles.missieVisieCard}>
-                    <div className={styles.missieVisieIcon}>{item.icon}</div>
-                    <div className={styles.missieVisieLabel}>{item.label}</div>
-                    <h3 className={styles.missieVisieTitel}>{item.titel}</h3>
-                    <p className={styles.missieVisieTekst}>{item.tekst}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </Stagger>
+          <div style={{ margin: '56px 0 20px', paddingTop: '40px', borderTop: '1px solid var(--rand)' }}>
+            <h2 style={{ fontSize: '22px', marginBottom: '6px' }}>Missie <em>&amp; visie</em></h2>
           </div>
         </FadeIn>
+
+        <div className={vwStyles.mvWrapper}>
+          <FadeIn from="left" delay={0.1} style={{ height: '100%' }}>
+            <div className={`${vwStyles.mvCard} ${vwStyles.mvMissie} noise-overlay`} style={{ height: '100%' }}>
+              <div className={vwStyles.mvCardHeader}>
+                <div className={`${vwStyles.mvCardIcon} ${vwStyles.mvMissieIcon}`}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round">
+                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="white" stroke="none"/>
+                  </svg>
+                </div>
+                <h3 className={vwStyles.mvTitleLight}>Missie</h3>
+              </div>
+              <p className={vwStyles.mvDescLight}>
+                Nieuw Niveau staat naast mensen met complexe problematiek in hun eigen omgeving — niet om het over te nemen, maar door naast iemand te staan. We maken zichtbaar hoe gedragspatronen ontstaan, hoe een aandoening iemands leven kleurt, en wat er wél mogelijk is binnen die werkelijkheid. Elke beperking draagt kracht in zich. Het zichtbaar maken en benutten — dát is het nieuwe niveau van onze cliënten.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn from="right" delay={0.2} style={{ height: '100%' }}>
+            <div className={`${vwStyles.mvCard} ${vwStyles.mvVisie}`} style={{ height: '100%' }}>
+              <div className={vwStyles.mvCardHeader}>
+                <div className={`${vwStyles.mvCardIcon} ${vwStyles.mvVisieIcon}`}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--zalm-donker)" strokeWidth={2} strokeLinecap="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <h3 className={vwStyles.mvTitleDark}>Visie</h3>
+              </div>
+              <p className={vwStyles.mvDescDark}>
+                De zorg staat voor een fundamentele omslag. Jarenlang werd hulp individualistisch georganiseerd — gericht op de persoon, los van de wereld eromheen. Bij Nieuw Niveau staat niet alleen de cliënt centraal, maar ook zijn of haar omgeving: het netwerk, de wijk, de mensen die er dagelijks toe doen.
+              </p>
+              <p className={vwStyles.mvDescDark} style={{ marginTop: '10px' }}>
+                Tegelijkertijd groeit de druk op het zorgsysteem. Budgetten krimpen, wachtlijsten lopen op en de vraag naar begeleiding neemt toe. <strong>Nieuw Niveau sluit hierop aan door actiegericht te werken, in te zetten op innovatie en ontwikkeling, en kracht te vinden in wat eerder een beperking heette</strong> — niet werken binnen het systeem zoals het was, maar bouwen aan zorg zoals het moet zijn.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
 
         {/* Reviews */}
         <FadeIn delay={0.1}>

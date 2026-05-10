@@ -53,72 +53,136 @@
 }
 
 /* ══════════════════════════════════════
-   VISUELE KOLOM — warme achtergrond + 4 bollen
+   VISUELE KOLOM — organische verf op crème
 ══════════════════════════════════════ */
 .heroBlobScene {
   position: relative;
-  background: #ece0d2;
+  background: #FAF7F2;
   overflow: hidden;
   min-height: calc(100dvh - 84px);
 }
 
-/* ── Sfeer: grote zachte gloed die de kleur zet ── */
-.blobGlow {
+/* ── multiply op crème = kleuren vloeien als waterverf ── */
+.shape1 {
   position: absolute;
-  inset: -40px;
-  background:
-    radial-gradient(ellipse 70% 65% at 75% 40%, rgba(232, 146, 124, 0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 55% at 30% 70%, rgba(26,  53,  53, 0.28) 0%, transparent 65%);
+  width: 88%; height: 95%;
+  top: 2%; right: -8%;
+  background: radial-gradient(ellipse 65% 70% at 52% 48%, #E8927C 0%, rgba(232, 146, 124, 0) 72%);
+  border-radius: 52% 48% 38% 62% / 44% 56% 44% 56%;
+  mix-blend-mode: multiply;
+  opacity: 0.90;
+  filter: blur(36px);
+  animation: organic1 18s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+.shape2 {
+  position: absolute;
+  width: 90%; height: 80%;
+  bottom: -8%; left: -4%;
+  background: radial-gradient(ellipse 62% 58% at 48% 44%, #c4694a 0%, rgba(196, 105, 74, 0) 72%);
+  border-radius: 38% 62% 58% 42% / 54% 38% 62% 46%;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  filter: blur(48px);
+  animation: organic2 22s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  animation-delay: -4s;
+}
+
+.shape3 {
+  position: absolute;
+  width: 65%; height: 70%;
+  top: -5%; right: -2%;
+  background: radial-gradient(ellipse 62% 62% at 50% 52%, #2C5F5F 0%, rgba(44, 95, 95, 0) 72%);
+  border-radius: 42% 58% 46% 54% / 54% 46% 58% 42%;
+  mix-blend-mode: multiply;
+  opacity: 0.65;
+  filter: blur(42px);
+  animation: organic3 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  animation-delay: -8s;
+}
+
+.shape4 {
+  position: absolute;
+  width: 78%; height: 80%;
+  top: 15%; left: 4%;
+  background: radial-gradient(ellipse 62% 62% at 52% 46%, #f2b5a0 0%, rgba(242, 181, 160, 0) 72%);
+  border-radius: 62% 38% 46% 54% / 38% 62% 38% 62%;
+  mix-blend-mode: multiply;
+  opacity: 0.82;
+  filter: blur(46px);
+  animation: organic4 24s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  animation-delay: -2s;
+}
+
+.shape5 {
+  position: absolute;
+  width: 70%; height: 65%;
+  top: 35%; left: 8%;
+  background: radial-gradient(ellipse 52% 54% at 50% 50%, #a03a20 0%, rgba(160, 58, 32, 0) 68%);
+  border-radius: 48% 52% 36% 64% / 62% 38% 62% 38%;
+  mix-blend-mode: multiply;
+  opacity: 0.48;
+  filter: blur(58px);
+  animation: organic5 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  animation-delay: -6s;
+}
+
+.shape6 {
+  position: absolute;
+  width: 58%; height: 70%;
+  bottom: -2%; right: 3%;
+  background: radial-gradient(ellipse 56% 60% at 50% 46%, #3d7272 0%, rgba(61, 114, 114, 0) 72%);
+  border-radius: 46% 54% 62% 38% / 54% 46% 54% 46%;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  filter: blur(46px);
+  animation: organic6 19s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  animation-delay: -1s;
+}
+
+/* ── Overgang naar tekstkant ── */
+.fadeOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #FAF7F2 0%,
+    rgba(250, 247, 242, 0.85) 7%,
+    rgba(250, 247, 242, 0.3) 14%,
+    transparent 25%
+  );
+  z-index: 2;
   pointer-events: none;
 }
 
-/* ── Bol A: groot teal, boven-rechts, deels buiten ── */
-.blobA {
-  position: absolute;
-  width: 360px; height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 34% 30%, #3d7272, #0f2323);
-  top: -60px; right: -50px;
-  box-shadow: inset -18px -18px 40px rgba(0,0,0,0.18);
+/* ── Animaties ── */
+@keyframes organic1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-22px, 18px) scale(1.06); }
 }
-
-/* ── Bol B: groot salmon, midden, overlapt A ── */
-.blobB {
-  position: absolute;
-  width: 310px; height: 310px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
-  top: 38%; right: 8%;
-  box-shadow: inset -14px -14px 32px rgba(0,0,0,0.14);
+@keyframes organic2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(18px, -24px) scale(0.94); }
 }
-
-/* ── Bol C: klein creme-warm, raakt B aan linksonder ── */
-.blobC {
-  position: absolute;
-  width: 180px; height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 34%, #f8efe4, #ddd0c0);
-  bottom: 12%; right: 28%;
-  box-shadow: inset -8px -8px 18px rgba(0,0,0,0.10);
+@keyframes organic3 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-16px, -20px) scale(1.08); }
 }
-
-/* ── Bol D: kleine donkere dot voor ritme ── */
-.blobD {
-  position: absolute;
-  width: 88px; height: 88px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 36%, #2a5050, #0d2020);
-  bottom: 28%; right: 56%;
-  box-shadow: inset -5px -5px 12px rgba(0,0,0,0.20);
+@keyframes organic4 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(24px, 16px) scale(0.96); }
+}
+@keyframes organic5 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-20px, 22px) scale(1.04); }
+}
+@keyframes organic6 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(14px, -18px) scale(1.05); }
 }
 
 /* ── Mobiel ── */
 @media (max-width: 900px) {
   .heroBlobScene { min-height: 300px; }
   .homeText      { padding: 40px 5vw; }
-
-  .blobA { width: 220px; height: 220px; top: -30px; right: -30px; }
-  .blobB { width: 190px; height: 190px; top: 35%;  right: 5%;   }
-  .blobC { width: 120px; height: 120px; }
-  .blobD { width:  58px; height:  58px; }
 }

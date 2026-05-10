@@ -79,11 +79,13 @@ export default function HomeContent() {
 
       {/* ── Visuele kolom ── */}
       <div className={styles.heroBlobScene}>
-        <div className={styles.blobGlow} />
-        <div className={styles.blobA} />
-        <div className={styles.blobB} />
-        <div className={styles.blobC} />
-        <div className={styles.blobD} />
+        <div className={styles.shape1} />
+        <div className={styles.shape2} />
+        <div className={styles.shape3} />
+        <div className={styles.shape4} />
+        <div className={styles.shape5} />
+        <div className={styles.shape6} />
+        <div className={styles.fadeOverlay} />
       </div>
     </main>
   )
