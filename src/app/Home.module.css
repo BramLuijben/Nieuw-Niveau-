@@ -119,6 +119,7 @@
     justify-content: center;
     padding: 40px 6vw;
     min-height: 100dvh;
+    overflow: hidden;
   }
 
   .mobileBlobs {

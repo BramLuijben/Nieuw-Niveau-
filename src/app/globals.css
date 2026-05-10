@@ -39,6 +39,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -315,6 +316,8 @@ nav {
   max-width: 1280px;
   margin: 0 auto;
   padding: 30px 5vw 80px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Sectie-witruimte: 8rem op desktop */
