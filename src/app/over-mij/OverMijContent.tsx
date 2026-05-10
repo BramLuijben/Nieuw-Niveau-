@@ -15,14 +15,6 @@ export default function OverMijContent() {
   return (
     <main className={`page ${styles.page}`}>
 
-      {/* Decoratieve bollen rechtsboven */}
-      <div className={styles.cornerBlobs} aria-hidden="true">
-        <div className={styles.cornerBlob1} />
-        <div className={styles.cornerBlob2} />
-        <div className={styles.cornerBlob3} />
-        <div className={styles.cornerBlob4} />
-      </div>
-
       <div className="page-inner">
         <FadeIn delay={0.05}>
           <div className="eyebrow"><span className="eyebrow-num">03</span> Over ons</div>
