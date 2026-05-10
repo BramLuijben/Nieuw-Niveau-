@@ -53,136 +53,71 @@
 }
 
 /* ══════════════════════════════════════
-   VISUELE KOLOM — organische verf op crème
+   VISUELE KOLOM — foto
 ══════════════════════════════════════ */
-.heroBlobScene {
+.homePhoto {
   position: relative;
-  background: #FAF7F2;
   overflow: hidden;
   min-height: calc(100dvh - 84px);
 }
 
-/* ── multiply op crème = kleuren vloeien als waterverf ── */
-.shape1 {
-  position: absolute;
-  width: 72%; height: 80%;
-  top: 8%; right: -4%;
-  background: radial-gradient(ellipse 68% 72% at 52% 48%, #E8927C 0%, #E8927C 38%, rgba(232, 146, 124, 0) 85%);
-  border-radius: 52% 48% 38% 62% / 44% 56% 44% 56%;
-  mix-blend-mode: multiply;
-  opacity: 0.72;
-  filter: blur(14px);
-  animation: organic1 18s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-}
-
-.shape2 {
-  position: absolute;
-  width: 68%; height: 72%;
-  bottom: -4%; left: 2%;
-  background: radial-gradient(ellipse 65% 62% at 48% 44%, #c4694a 0%, #c4694a 35%, rgba(196, 105, 74, 0) 82%);
-  border-radius: 38% 62% 58% 42% / 54% 38% 62% 46%;
-  mix-blend-mode: multiply;
-  opacity: 0.65;
-  filter: blur(16px);
-  animation: organic2 22s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  animation-delay: -4s;
-}
-
-.shape3 {
-  position: absolute;
-  width: 56%; height: 62%;
-  top: -4%; right: 0%;
-  background: radial-gradient(ellipse 64% 66% at 50% 52%, #2C5F5F 0%, #2C5F5F 32%, rgba(44, 95, 95, 0) 80%);
-  border-radius: 42% 58% 46% 54% / 54% 46% 58% 42%;
-  mix-blend-mode: multiply;
-  opacity: 0.58;
-  filter: blur(12px);
-  animation: organic3 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  animation-delay: -8s;
-}
-
-.shape4 {
-  position: absolute;
-  width: 65%; height: 70%;
-  top: 20%; left: 6%;
-  background: radial-gradient(ellipse 65% 65% at 52% 46%, #e07a5f 0%, #e07a5f 30%, rgba(224, 122, 95, 0) 80%);
-  border-radius: 62% 38% 46% 54% / 38% 62% 38% 62%;
-  mix-blend-mode: multiply;
-  opacity: 0.60;
-  filter: blur(18px);
-  animation: organic4 24s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  animation-delay: -2s;
-}
-
-.shape5 {
-  position: absolute;
-  width: 55%; height: 58%;
-  top: 38%; left: 10%;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%, #a03a20 0%, #a03a20 28%, rgba(160, 58, 32, 0) 78%);
-  border-radius: 48% 52% 36% 64% / 62% 38% 62% 38%;
-  mix-blend-mode: multiply;
-  opacity: 0.45;
-  filter: blur(20px);
-  animation: organic5 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  animation-delay: -6s;
-}
-
-.shape6 {
-  position: absolute;
-  width: 50%; height: 60%;
-  bottom: 0%; right: 4%;
-  background: radial-gradient(ellipse 62% 64% at 50% 46%, #3d7272 0%, #3d7272 30%, rgba(61, 114, 114, 0) 80%);
-  border-radius: 46% 54% 62% 38% / 54% 46% 54% 46%;
-  mix-blend-mode: multiply;
-  opacity: 0.52;
-  filter: blur(14px);
-  animation: organic6 19s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  animation-delay: -1s;
-}
-
-/* ── Overgang naar tekstkant ── */
-.fadeOverlay {
+/* ── Gradient overlays ── */
+.photoFadeLeft {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
     #FAF7F2 0%,
-    rgba(250, 247, 242, 0.85) 7%,
-    rgba(250, 247, 242, 0.3) 14%,
-    transparent 25%
+    rgba(250, 247, 242, 0.7) 8%,
+    rgba(250, 247, 242, 0.15) 20%,
+    transparent 32%
   );
   z-index: 2;
   pointer-events: none;
 }
 
-/* ── Animaties ── */
-@keyframes organic1 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-22px, 18px) scale(1.06); }
+.photoFadeRight {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    #FAF7F2 0%,
+    rgba(250, 247, 242, 0.4) 10%,
+    transparent 24%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
-@keyframes organic2 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(18px, -24px) scale(0.94); }
-}
-@keyframes organic3 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-16px, -20px) scale(1.08); }
-}
-@keyframes organic4 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(24px, 16px) scale(0.96); }
-}
-@keyframes organic5 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-20px, 22px) scale(1.04); }
-}
-@keyframes organic6 {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(14px, -18px) scale(1.05); }
+
+.photoFadeBottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    #FAF7F2 0%,
+    rgba(250, 247, 242, 0.5) 8%,
+    transparent 22%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* ── Mobiel ── */
 @media (max-width: 900px) {
-  .heroBlobScene { min-height: 300px; }
-  .homeText      { padding: 40px 5vw; }
+  .homePhoto {
+    display: none;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+    min-height: 100dvh;
+  }
+
+  .homeText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 6vw;
+    min-height: 100dvh;
+  }
 }

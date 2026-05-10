@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MotionLink } from '@/components/Animate'
 import styles from './Home.module.css'
@@ -77,15 +78,18 @@ export default function HomeContent() {
         </motion.div>
       </div>
 
-      {/* ── Visuele kolom ── */}
-      <div className={styles.heroBlobScene}>
-        <div className={styles.shape1} />
-        <div className={styles.shape2} />
-        <div className={styles.shape3} />
-        <div className={styles.shape4} />
-        <div className={styles.shape5} />
-        <div className={styles.shape6} />
-        <div className={styles.fadeOverlay} />
+      {/* ── Foto kolom ── */}
+      <div className={styles.homePhoto}>
+        <Image
+          src="/images/hero.png"
+          alt="Nieuw Niveau ambulante begeleiding"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+        />
+        <div className={styles.photoFadeLeft} />
+        <div className={styles.photoFadeRight} />
+        <div className={styles.photoFadeBottom} />
       </div>
     </main>
   )
