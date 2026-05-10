@@ -62,7 +62,7 @@ export default function WerkwijzeContent() {
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke={step.light ? '#fff' : 'var(--zalm-donker)'}
+                      stroke="var(--zalm-donker)"
                       strokeWidth={2}
                       strokeLinecap="round"
                       strokeLinejoin="round"

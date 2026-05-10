@@ -85,49 +85,6 @@ export default function VoorWieContent() {
           ))}
         </Stagger>
 
-        {/* Missie & Visie */}
-        <FadeIn delay={0.1}>
-          <div style={{ margin: '64px 0 20px' }}>
-            <h2 style={{ fontSize: '22px', marginBottom: '6px' }}>Missie <em>&amp; visie</em></h2>
-          </div>
-        </FadeIn>
-
-        <div className={styles.mvWrapper}>
-          <FadeIn from="left" delay={0.1} style={{ height: '100%' }}>
-            <div className={`${styles.mvCard} ${styles.mvMissie} noise-overlay`} style={{ height: '100%' }}>
-              <div className={styles.mvCardHeader}>
-                <div className={`${styles.mvCardIcon} ${styles.mvMissieIcon}`}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round">
-                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="white" stroke="none"/>
-                  </svg>
-                </div>
-                <h3 className={styles.mvTitleLight}>Missie</h3>
-              </div>
-              <p className={styles.mvDescLight}>
-                Nieuw Niveau staat naast mensen met complexe problematiek in hun eigen omgeving — niet om het over te nemen, maar door naast iemand te staan. We maken zichtbaar hoe gedragspatronen ontstaan, hoe een aandoening iemands leven kleurt, en wat er wél mogelijk is binnen die werkelijkheid. Elke beperking draagt kracht in zich. Het zichtbaar maken en benutten — dát is het nieuwe niveau van onze cliënten.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn from="right" delay={0.2} style={{ height: '100%' }}>
-            <div className={`${styles.mvCard} ${styles.mvVisie}`} style={{ height: '100%' }}>
-              <div className={styles.mvCardHeader}>
-                <div className={`${styles.mvCardIcon} ${styles.mvVisieIcon}`}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--zalm-donker)" strokeWidth={2} strokeLinecap="round">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                  </svg>
-                </div>
-                <h3 className={styles.mvTitleDark}>Visie</h3>
-              </div>
-              <p className={styles.mvDescDark}>
-                De zorg staat voor een fundamentele omslag. Jarenlang werd hulp individualistisch georganiseerd — gericht op de persoon, los van de wereld eromheen. Bij Nieuw Niveau staat niet alleen de cliënt centraal, maar ook zijn of haar omgeving: het netwerk, de wijk, de mensen die er dagelijks toe doen.
-              </p>
-              <p className={styles.mvDescDark} style={{ marginTop: '10px' }}>
-                Tegelijkertijd groeit de druk op het zorgsysteem. Budgetten krimpen, wachtlijsten lopen op en de vraag naar begeleiding neemt toe. <strong>Nieuw Niveau sluit hierop aan door actiegericht te werken, in te zetten op innovatie en ontwikkeling, en kracht te vinden in wat eerder een beperking heette</strong> — niet werken binnen het systeem zoals het was, maar bouwen aan zorg zoals het moet zijn.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
       </div>
     </main>
   )

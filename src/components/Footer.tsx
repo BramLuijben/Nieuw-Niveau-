@@ -7,7 +7,7 @@ export default function Footer() {
       <span aria-hidden>·</span>
       <span>AGB-code 98108653</span>
       <span aria-hidden>·</span>
-      <span><span className="fn">Nieuw Niveau Begeleiding</span> © {new Date().getFullYear()}</span>
+      <span><span className="fn">Nieuw Niveau</span> © {new Date().getFullYear()}</span>
       <span aria-hidden>·</span>
       <Link href="/privacyverklaring">Privacyverklaring</Link>
       <span aria-hidden>·</span>
