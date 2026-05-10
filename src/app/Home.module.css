@@ -2,20 +2,11 @@
    HERO LAYOUT
 ══════════════════════════════════════ */
 .home {
-  height: 100dvh;
+  height: 100svh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 84px;
   position: relative;
-}
-
-@media (max-width: 900px) {
-  .home {
-    grid-template-columns: 1fr;
-    min-height: 100dvh;
-    height: auto;
-    padding-top: 84px;
-  }
 }
 
 /* ── Tekst kolom ── */
@@ -110,7 +101,7 @@
 
   .home {
     grid-template-columns: 1fr;
-    height: 100dvh;
+    height: 100svh;
   }
 
   .homeText {
@@ -118,7 +109,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px 6vw;
-    height: 100dvh;
+    height: 100svh;
     overflow: hidden;
   }
 
@@ -137,7 +128,6 @@
     background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
     top: 8%; right: -45px;
     opacity: 0.38;
-    filter: blur(12px);
     box-shadow: inset -4px -4px 10px rgba(0,0,0,0.12);
   }
   .mobileBlobs::after {
@@ -148,7 +138,6 @@
     background: radial-gradient(circle at 34% 30%, #4d8585, #1a3535);
     top: 60%; left: -22px;
     opacity: 0.28;
-    filter: blur(9px);
     box-shadow: inset -3px -3px 6px rgba(0,0,0,0.14);
   }
 }

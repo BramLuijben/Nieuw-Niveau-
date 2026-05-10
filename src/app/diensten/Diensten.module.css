@@ -17,7 +17,6 @@
     background: radial-gradient(circle at 36% 32%, #e07a5f, #a03a20);
     top: 3%; right: -28px;
     opacity: 0.36;
-    filter: blur(10px);
     box-shadow: inset -4px -4px 10px rgba(0,0,0,0.14);
   }
   .mobileBlobs::after {
@@ -28,7 +27,6 @@
     background: radial-gradient(circle at 38% 34%, #f8efe4, #f2b5a0);
     top: 52%; left: -20px;
     opacity: 0.34;
-    filter: blur(9px);
     box-shadow: inset -2px -2px 5px rgba(0,0,0,0.08);
   }
 }
