@@ -5,31 +5,30 @@
   .mobileBlobs {
     display: block;
     position: absolute;
-    top: 0; right: 0;
-    width: 200px; height: 280px;
+    inset: 0;
     pointer-events: none;
     z-index: 0;
   }
   .mobileBlobs::before {
     content: '';
     position: absolute;
-    width: 108px; height: 108px;
+    width: 115px; height: 115px;
     border-radius: 50%;
     background: radial-gradient(circle at 34% 30%, #3d7272, #0f2323);
-    top: -20px; right: -80px;
-    opacity: 0.40;
+    top: 2%; right: -70px;
+    opacity: 0.38;
     filter: blur(8px);
     box-shadow: inset -5px -5px 12px rgba(0,0,0,0.18);
   }
   .mobileBlobs::after {
     content: '';
     position: absolute;
-    width: 84px; height: 84px;
+    width: 82px; height: 82px;
     border-radius: 50%;
     background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
-    top: 90px; right: 20px;
-    opacity: 0.38;
-    filter: blur(8px);
+    top: 44%; left: -30px;
+    opacity: 0.36;
+    filter: blur(9px);
     box-shadow: inset -4px -4px 8px rgba(0,0,0,0.14);
   }
 }

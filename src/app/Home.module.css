@@ -124,31 +124,30 @@
   .mobileBlobs {
     display: block;
     position: absolute;
-    top: 0; right: 0;
-    width: 200px; height: 260px;
+    inset: 0;
     pointer-events: none;
     z-index: 0;
   }
   .mobileBlobs::before {
     content: '';
     position: absolute;
-    width: 110px; height: 110px;
+    width: 130px; height: 130px;
     border-radius: 50%;
     background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
-    top: 55px; right: -42px;
-    opacity: 0.42;
-    filter: blur(10px);
+    top: 8%; right: -45px;
+    opacity: 0.38;
+    filter: blur(12px);
     box-shadow: inset -4px -4px 10px rgba(0,0,0,0.12);
   }
   .mobileBlobs::after {
     content: '';
     position: absolute;
-    width: 60px; height: 60px;
+    width: 65px; height: 65px;
     border-radius: 50%;
     background: radial-gradient(circle at 34% 30%, #4d8585, #1a3535);
-    top: 148px; right: 22px;
-    opacity: 0.30;
-    filter: blur(8px);
+    top: 60%; left: -22px;
+    opacity: 0.28;
+    filter: blur(9px);
     box-shadow: inset -3px -3px 6px rgba(0,0,0,0.14);
   }
 }
