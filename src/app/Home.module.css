@@ -65,77 +65,77 @@
 /* ── multiply op crème = kleuren vloeien als waterverf ── */
 .shape1 {
   position: absolute;
-  width: 88%; height: 95%;
-  top: 2%; right: -8%;
-  background: radial-gradient(ellipse 65% 70% at 52% 48%, #E8927C 0%, rgba(232, 146, 124, 0) 72%);
+  width: 72%; height: 80%;
+  top: 8%; right: -4%;
+  background: radial-gradient(ellipse 68% 72% at 52% 48%, #E8927C 0%, #E8927C 38%, rgba(232, 146, 124, 0) 85%);
   border-radius: 52% 48% 38% 62% / 44% 56% 44% 56%;
   mix-blend-mode: multiply;
-  opacity: 0.90;
-  filter: blur(36px);
+  opacity: 0.72;
+  filter: blur(14px);
   animation: organic1 18s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
 }
 
 .shape2 {
   position: absolute;
-  width: 90%; height: 80%;
-  bottom: -8%; left: -4%;
-  background: radial-gradient(ellipse 62% 58% at 48% 44%, #c4694a 0%, rgba(196, 105, 74, 0) 72%);
+  width: 68%; height: 72%;
+  bottom: -4%; left: 2%;
+  background: radial-gradient(ellipse 65% 62% at 48% 44%, #c4694a 0%, #c4694a 35%, rgba(196, 105, 74, 0) 82%);
   border-radius: 38% 62% 58% 42% / 54% 38% 62% 46%;
   mix-blend-mode: multiply;
-  opacity: 0.75;
-  filter: blur(48px);
+  opacity: 0.65;
+  filter: blur(16px);
   animation: organic2 22s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-delay: -4s;
 }
 
 .shape3 {
   position: absolute;
-  width: 65%; height: 70%;
-  top: -5%; right: -2%;
-  background: radial-gradient(ellipse 62% 62% at 50% 52%, #2C5F5F 0%, rgba(44, 95, 95, 0) 72%);
+  width: 56%; height: 62%;
+  top: -4%; right: 0%;
+  background: radial-gradient(ellipse 64% 66% at 50% 52%, #2C5F5F 0%, #2C5F5F 32%, rgba(44, 95, 95, 0) 80%);
   border-radius: 42% 58% 46% 54% / 54% 46% 58% 42%;
   mix-blend-mode: multiply;
-  opacity: 0.65;
-  filter: blur(42px);
+  opacity: 0.58;
+  filter: blur(12px);
   animation: organic3 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-delay: -8s;
 }
 
 .shape4 {
   position: absolute;
-  width: 78%; height: 80%;
-  top: 15%; left: 4%;
-  background: radial-gradient(ellipse 62% 62% at 52% 46%, #f2b5a0 0%, rgba(242, 181, 160, 0) 72%);
+  width: 65%; height: 70%;
+  top: 20%; left: 6%;
+  background: radial-gradient(ellipse 65% 65% at 52% 46%, #e07a5f 0%, #e07a5f 30%, rgba(224, 122, 95, 0) 80%);
   border-radius: 62% 38% 46% 54% / 38% 62% 38% 62%;
   mix-blend-mode: multiply;
-  opacity: 0.82;
-  filter: blur(46px);
+  opacity: 0.60;
+  filter: blur(18px);
   animation: organic4 24s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-delay: -2s;
 }
 
 .shape5 {
   position: absolute;
-  width: 70%; height: 65%;
-  top: 35%; left: 8%;
-  background: radial-gradient(ellipse 52% 54% at 50% 50%, #a03a20 0%, rgba(160, 58, 32, 0) 68%);
+  width: 55%; height: 58%;
+  top: 38%; left: 10%;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, #a03a20 0%, #a03a20 28%, rgba(160, 58, 32, 0) 78%);
   border-radius: 48% 52% 36% 64% / 62% 38% 62% 38%;
   mix-blend-mode: multiply;
-  opacity: 0.48;
-  filter: blur(58px);
+  opacity: 0.45;
+  filter: blur(20px);
   animation: organic5 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-delay: -6s;
 }
 
 .shape6 {
   position: absolute;
-  width: 58%; height: 70%;
-  bottom: -2%; right: 3%;
-  background: radial-gradient(ellipse 56% 60% at 50% 46%, #3d7272 0%, rgba(61, 114, 114, 0) 72%);
+  width: 50%; height: 60%;
+  bottom: 0%; right: 4%;
+  background: radial-gradient(ellipse 62% 64% at 50% 46%, #3d7272 0%, #3d7272 30%, rgba(61, 114, 114, 0) 80%);
   border-radius: 46% 54% 62% 38% / 54% 46% 54% 46%;
   mix-blend-mode: multiply;
-  opacity: 0.55;
-  filter: blur(46px);
+  opacity: 0.52;
+  filter: blur(14px);
   animation: organic6 19s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
   animation-delay: -1s;
 }
