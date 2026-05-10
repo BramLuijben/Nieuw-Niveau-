@@ -2,7 +2,7 @@
    HERO LAYOUT
 ══════════════════════════════════════ */
 .home {
-  min-height: 100dvh;
+  height: 100dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 84px;
@@ -110,7 +110,7 @@
 
   .home {
     grid-template-columns: 1fr;
-    min-height: 100dvh;
+    height: 100dvh;
   }
 
   .homeText {
@@ -118,7 +118,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 40px 6vw;
-    min-height: 100dvh;
+    height: 100dvh;
     overflow: hidden;
   }
 
