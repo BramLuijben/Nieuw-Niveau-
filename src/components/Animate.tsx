@@ -14,9 +14,9 @@ interface AnimateProps {
 }
 
 const offsets = {
-  below: { y: 28, x: 0 },
-  left:  { x: -36, y: 0 },
-  right: { x: 36, y: 0 },
+  below: { y: 12, x: 0 },
+  left:  { x: -16, y: 0 },
+  right: { x: 16, y: 0 },
   none:  { x: 0, y: 0 },
 }
 
@@ -26,11 +26,11 @@ export function FadeIn({
   className,
   style,
   delay = 0,
-  duration = 0.55,
+  duration = 0.4,
   from = 'below',
 }: AnimateProps) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const inView = useInView(ref, { once: true, margin: '-40px' })
   const offset = offsets[from]
 
   return (
@@ -70,13 +70,13 @@ export function Stagger({
     <motion.div
       ref={ref}
       className={className}
-      style={style}
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       variants={{
         hidden: {},
         visible: { transition: { staggerChildren: stagger, delayChildren: delay } },
       }}
+      style={{ ...(style ?? {}), willChange: 'opacity, transform' }}
     >
       {children}
     </motion.div>

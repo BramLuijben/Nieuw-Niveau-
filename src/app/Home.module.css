@@ -26,6 +26,14 @@
   word-spacing: -0.04em;
 }
 
+.heroSubtitle {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--grijs);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
 .heroActions {
   display: flex;
   gap: 12px;
@@ -108,9 +116,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 40px 6vw;
     height: 100svh;
     overflow: hidden;
+  }
+
+  .heroSubtitle {
+    max-width: 36ch;
+  }
+
+  .heroActions {
+    justify-content: center;
   }
 
   .mobileBlobs {
