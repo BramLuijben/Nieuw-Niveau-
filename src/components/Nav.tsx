@@ -22,12 +22,12 @@ export default function Nav() {
       <div className="nav-inner">
         <Link href="/" aria-label="Nieuw Niveau Begeleiding — home">
           <Image
-            src="/images/logo-roodkleur.png"
+            src="/images/logo-gebruik-dit.png"
             alt="Nieuw Niveau Begeleiding"
-            width={90}
-            height={118}
+            width={400}
+            height={300}
             priority
-            style={{ height: '72px', width: 'auto', display: 'block' }}
+            style={{ height: '52px', width: 'auto', display: 'block' }}
           />
         </Link>
 

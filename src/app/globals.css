@@ -222,7 +222,7 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 16px 5vw;
+  padding: 10px 5vw;
   background: rgba(248, 240, 232, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -305,7 +305,7 @@ nav {
 ═══════════════════════════════════════════ */
 .page {
   min-height: 100vh;
-  padding-top: 84px;
+  padding-top: 72px;
   position: relative;
 }
 /* Linker accentbalk — zelfde als document template */
@@ -313,7 +313,7 @@ nav {
   content: '';
   position: absolute;
   left: 0;
-  top: 84px;
+  top: 72px;
   bottom: 0;
   width: 4px;
   background: linear-gradient(180deg, var(--zalm) 0%, var(--zalm-donker) 100%);
