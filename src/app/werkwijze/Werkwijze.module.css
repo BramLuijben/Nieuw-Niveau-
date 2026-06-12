@@ -14,7 +14,7 @@
     position: absolute;
     width: 88px; height: 88px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #c4694a, #8a3520);
+    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
     top: 4%; right: -32px;
     opacity: 0.36;
     box-shadow: inset -4px -4px 10px rgba(0,0,0,0.16);
@@ -24,7 +24,7 @@
     position: absolute;
     width: 62px; height: 62px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #f5ae96, #e07a5f);
+    background: radial-gradient(circle at 36% 32%, #f0e5e0, #99463A);
     top: 65%; right: 6%;
     opacity: 0.34;
     box-shadow: inset -2px -2px 6px rgba(0,0,0,0.10);
@@ -76,7 +76,7 @@
 }
 .step:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(201,110,85,0.15);
+  box-shadow: 0 16px 40px rgba(153,70,58,0.15);
   border-color: var(--zalm);
 }
 

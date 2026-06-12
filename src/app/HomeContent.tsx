@@ -23,7 +23,7 @@ export default function HomeContent() {
           {...fadeUp(0.1)}
         >
           <span style={{ fontWeight: 300 }}>Van vastlopen naar een </span>
-          <span style={{ fontStyle: 'italic', fontWeight: 400, color: '#E8927C', whiteSpace: 'nowrap' }}>
+          <span style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--primary)', whiteSpace: 'nowrap' }}>
             nieuw niveau
           </span>
         </motion.h1>

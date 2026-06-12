@@ -4,13 +4,21 @@
 ═══════════════════════════════════════════════════════════ */
 
 :root {
-  --zalm:          #E8927C;
-  --zalm-donker:   #C96E55;
-  --zalm-licht:    #F5C8B8;
-  --zalm-heel-licht: #FBEEE8;
-  --zalm-cream:    #FDF5F0;
-  --teal:          #1A3535;
-  --teal-licht:    #2A4F4F;
+  /* Primaire kleur: brick/roest */
+  --primary:         #99463A;
+  --primary-dark:    #7E3A30;
+  --primary-tint:    #F0E5E0;
+
+  /* Backward-compat aliassen — worden overal gebruikt in de modules */
+  --zalm:            #99463A;
+  --zalm-donker:     #7E3A30;
+  --zalm-licht:      #C4857D;
+  --zalm-heel-licht: #F0E5E0;
+  --zalm-cream:      #FAF0EE;
+
+  /* Espresso donker (vervangt teal) */
+  --teal:          #3A2E2A;
+  --teal-licht:    #4A3830;
   --zwart:         #1A1A1A;
   --zwart-zacht:   #2D2D2D;
   --grijs:         #6B6B6E;

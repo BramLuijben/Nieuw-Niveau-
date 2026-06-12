@@ -1,15 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const links = [
-  { href: '/',          label: 'Home' },
-  { href: '/voor-wie',  label: 'Voor wie' },
-  { href: '/werkwijze', label: 'Werkwijze' },
-  { href: '/over-mij',  label: 'Over ons' },
-  { href: '/diensten',  label: 'Diensten' },
+  { href: '/',                  label: 'Home' },
+  { href: '/voor-wie',          label: 'Voor wie' },
+  { href: '/werkwijze',         label: 'Werkwijze' },
+  { href: '/over-mij',          label: 'Over ons' },
+  { href: '/diensten',          label: 'Diensten' },
+  { href: '/voor-verwijzers',   label: 'Verwijzers' },
 ]
 
 export default function Nav() {
@@ -20,19 +22,14 @@ export default function Nav() {
     <nav>
       <div className="nav-inner">
         <Link href="/" aria-label="Nieuw Niveau Begeleiding — home">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 900 410"
-            height="70"
-            style={{ height: '70px', width: 'auto', display: 'block' }}
-            aria-hidden="true"
-          >
-            <circle cx="390" cy="108" r="38" fill="none" stroke="#df6d4b" strokeWidth="13"/>
-            <path d="M 302,248 A 88,88 0 0,1 478,248 Z" fill="#df6d4b"/>
-            <circle cx="512" cy="133" r="38" fill="none" stroke="#1f1f21" strokeWidth="13"/>
-            <path d="M 424,273 A 88,88 0 0,1 600,273 Z" fill="#1f1f21"/>
-            <text x="450" y="375" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontWeight="700" fontSize="86" letterSpacing="6" fill="#1f1f21">NIEUW NIVEAU</text>
-          </svg>
+          <Image
+            src="/images/logo-roodkleur.png"
+            alt="Nieuw Niveau Begeleiding"
+            width={90}
+            height={118}
+            priority
+            style={{ height: '62px', width: 'auto', display: 'block' }}
+          />
         </Link>
 
         <button

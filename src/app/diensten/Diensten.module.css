@@ -14,7 +14,7 @@
     position: absolute;
     width: 95px; height: 95px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #e07a5f, #a03a20);
+    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
     top: 3%; right: -28px;
     opacity: 0.36;
     box-shadow: inset -4px -4px 10px rgba(0,0,0,0.14);
@@ -24,7 +24,7 @@
     position: absolute;
     width: 68px; height: 68px;
     border-radius: 50%;
-    background: radial-gradient(circle at 38% 34%, #f8efe4, #f2b5a0);
+    background: radial-gradient(circle at 38% 34%, #f0e5e0, #c4857d);
     top: 52%; left: -20px;
     opacity: 0.34;
     box-shadow: inset -2px -2px 5px rgba(0,0,0,0.08);
@@ -81,7 +81,7 @@
 }
 .dienstCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(201,110,85,0.13);
+  box-shadow: 0 12px 32px rgba(153,70,58,0.13);
 }
 .secondary::after {
   content: '';

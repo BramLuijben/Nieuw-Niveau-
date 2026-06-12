@@ -14,7 +14,7 @@
     position: absolute;
     width: 115px; height: 115px;
     border-radius: 50%;
-    background: radial-gradient(circle at 34% 30%, #3d7272, #0f2323);
+    background: radial-gradient(circle at 34% 30%, #5c4e48, #3A2E2A);
     top: 2%; right: -70px;
     opacity: 0.38;
     box-shadow: inset -5px -5px 12px rgba(0,0,0,0.18);
@@ -24,7 +24,7 @@
     position: absolute;
     width: 82px; height: 82px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #f5ae96, #c45c42);
+    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
     top: 44%; left: -30px;
     opacity: 0.36;
     box-shadow: inset -4px -4px 8px rgba(0,0,0,0.14);

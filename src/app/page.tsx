@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import HomeContent from './HomeContent'
+import Werkgebied from '@/components/Werkgebied'
+import FAQ from '@/components/FAQ'
 
 export const metadata: Metadata = {
   title: 'Nieuw Niveau — Ambulante WMO Begeleiding Amersfoort',
@@ -13,5 +15,11 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <HomeContent />
+  return (
+    <>
+      <HomeContent />
+      <Werkgebied />
+      <FAQ />
+    </>
+  )
 }

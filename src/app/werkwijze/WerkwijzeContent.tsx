@@ -9,7 +9,7 @@ const steps = [
     icon: <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>,
     title: 'Aanmelding & eerste contact',
     desc: 'Nadat je je hebt aangemeld, maken we binnen een week — bij overeenkomende beschikbaarheid — de eerste afspraak. Je begeleider komt naar jou toe, zodat de drempel zo laag mogelijk blijft.',
-    bg: 'linear-gradient(135deg, #FBEEE8, #F5C8B8)',
+    bg: 'linear-gradient(135deg, #F0E5E0, #c4857d)',
     light: false,
   },
   {
@@ -17,7 +17,7 @@ const steps = [
     icon: <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 11a4 4 0 100-8 4 4 0 000 8z"/>,
     title: 'Kennismaken',
     desc: 'In het begin staat kennismaken centraal. We nemen de tijd om elkaar te leren kennen en te voelen of er vertrouwen kan ontstaan — want dat is de basis voor het verdere proces.',
-    bg: 'linear-gradient(135deg, #F5C8B8, #E8927C)',
+    bg: 'linear-gradient(135deg, #c4857d, #99463A)',
     light: false,
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     icon: <path d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/>,
     title: 'In kaart brengen',
     desc: 'Samen brengen we in kaart wat er speelt. Waar loop je tegenaan, wat heb je nodig en wat zou je anders willen? We krijgen zicht op patronen, krachten, belangrijke mensen om je heen — en wat je helpt of juist tegenhoudt.',
-    bg: 'linear-gradient(135deg, #E8927C, #C96E55)',
+    bg: 'linear-gradient(135deg, #99463A, #7E3A30)',
     light: false,
   },
   {
