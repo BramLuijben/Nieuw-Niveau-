@@ -6,12 +6,11 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const links = [
-  { href: '/',                  label: 'Home' },
-  { href: '/voor-wie',          label: 'Voor wie' },
-  { href: '/werkwijze',         label: 'Werkwijze' },
-  { href: '/over-mij',          label: 'Over ons' },
-  { href: '/diensten',          label: 'Diensten' },
-  { href: '/voor-verwijzers',   label: 'Verwijzers' },
+  { href: '/',          label: 'Home' },
+  { href: '/voor-wie',  label: 'Voor wie' },
+  { href: '/werkwijze', label: 'Werkwijze' },
+  { href: '/over-mij',  label: 'Over ons' },
+  { href: '/diensten',  label: 'Diensten' },
 ]
 
 export default function Nav() {

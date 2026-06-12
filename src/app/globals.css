@@ -223,7 +223,7 @@ nav {
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 16px 5vw;
-  background: rgba(250, 245, 238, 0.92);
+  background: rgba(248, 240, 232, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(229, 223, 214, 0.6);
@@ -400,7 +400,8 @@ nav {
    FOOTER
 ═══════════════════════════════════════════ */
 .site-footer {
-  padding: 22px 24px;
+  position: relative;
+  padding: 22px 80px 22px 24px;
   border-top: 1px solid var(--rand);
   font-size: 13px;
   color: var(--grijs);
@@ -413,16 +414,26 @@ nav {
   gap: 6px 18px;
   letter-spacing: 0.01em;
 }
-.site-footer .fn { color: var(--zwart); font-weight: 400; font-style: normal; }
 .site-footer a { color: var(--grijs); }
 .site-footer a:hover { color: var(--zalm-donker); }
+.footer-keurmerk {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @media (max-width: 600px) {
   .site-footer {
     flex-direction: column;
     gap: 16px;
     text-align: center;
-    padding: 28px 16px 36px;
+    padding: 28px 16px 80px;
   }
   .site-footer [aria-hidden] { display: none; }
+  .footer-keurmerk {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+  }
 }

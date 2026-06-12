@@ -4,8 +4,6 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
 import PageTransition from '@/components/PageTransition'
-import BackToTop from '@/components/BackToTop'
-import MobileContact from '@/components/MobileContact'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -108,8 +106,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <PageTransition>{children}</PageTransition>
         <Footer />
         <CookieBanner />
-        <BackToTop />
-        <MobileContact />
       </body>
     </html>
   )
