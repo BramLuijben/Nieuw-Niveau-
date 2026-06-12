@@ -7,26 +7,26 @@ const diensten = [
   {
     num: '01',
     titel: 'Begeleiding via PGB',
-    omschrijving: 'Met een persoonsgebonden budget kies jij je eigen begeleider. Jij bepaalt wie bij jou komt en wanneer. Heb je nog geen PGB maar denk je dat je in aanmerking komt? Ik denk graag met je mee over de mogelijkheden en het aanvraagproces.',
+    omschrijving: 'Met een persoonsgebonden budget kies je je eigen begeleider. Jij bepaalt wie er komt en wanneer. Nog geen PGB, maar denk je dat je ervoor in aanmerking komt? We helpen je op weg met de aanvraag.',
     aanbevolen: false,
   },
   {
     num: '02',
     titel: 'Particuliere begeleiding',
-    omschrijving: 'Begeleiding is ook mogelijk op eigen kosten, zonder indicatie of verwijzing. Neem gerust contact op voor de mogelijkheden.',
+    omschrijving: 'Begeleiding kan ook op eigen kosten, zonder indicatie of verwijzing. Neem contact op voor de mogelijkheden.',
     aanbevolen: false,
   },
   {
     num: '03',
     titel: 'Onderaannemerschap',
-    omschrijving: 'Wij werken ook samen met zorgorganisaties als onderaannemer. Deze samenwerking wordt momenteel nog besproken. Wanneer hierover duidelijkheid is volgt de informatie.',
+    omschrijving: 'We werken ook samen met zorgorganisaties als onderaannemer. Die samenwerking bespreken we nu. Zodra er meer bekend is, lees je het hier.',
     inOntwikkeling: true,
     aanbevolen: false,
   },
   {
     num: '04',
     titel: 'Contractuele basis',
-    omschrijving: 'Momenteel zijn wij met verschillende regio\'s in gesprek om op contractuele basis, middels de WMO, cliënten te begeleiden.',
+    omschrijving: 'We zijn met verschillende regio\'s in gesprek om cliënten via de WMO te begeleiden op contractbasis.',
     inOntwikkeling: true,
     aanbevolen: false,
   },
@@ -49,7 +49,7 @@ export default function DienstenContent() {
 
         <FadeIn delay={0.2}>
           <p className={styles.dienstenIntro}>
-            Aansluitend op onze visie passen wij onze begeleiding aan op jou. We kijken naar jouw situatie, wensen en doelen en stemmen onze ondersteuning daarop af. Wij zijn onder andere actief in Amersfoort, Utrecht Zuidoost, Hilversum en omstreken.
+            Onze begeleiding past zich aan jou aan. We kijken naar je situatie, je wensen en je doelen, en stemmen daarop af. We zijn actief in Amersfoort, Utrecht Zuidoost, Hilversum en omstreken.
           </p>
         </FadeIn>
 

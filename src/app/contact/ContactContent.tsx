@@ -53,7 +53,7 @@ export default function ContactContent() {
 
         <FadeIn delay={0.2}>
           <p className={styles.contactIntro}>
-            De eerste stap is vaak de moeilijkste. Stuur vrijblijvend een bericht — we kijken samen wat mogelijk is.
+            De eerste stap is vaak de moeilijkste. Stuur vrijblijvend een bericht, dan kijken we samen wat kan.
           </p>
         </FadeIn>
 

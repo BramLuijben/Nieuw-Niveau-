@@ -6,9 +6,9 @@ import styles from './OverMij.module.css'
 import vwStyles from '../voor-wie/VoorWie.module.css'
 
 const reviews = [
-  'Door samen met Bram te werken aan mijn administratie en financiën, kreeg ik meer ruimte in mijn hoofd — en kon ik weer genieten van de kleine dingen.',
-  'Ons huis was jaren een bron van stress. Samen hebben we stap voor stap opgeruimd. Nu heb ik weer ruimte om thuis te zijn — en zelfs mijn hobby op te pakken.',
-  'Nieuwe mensen ontmoeten vond ik spannend en overweldigend. Bram hielp me dit aan te pakken op mijn tempo.',
+  'Door samen met Bram aan mijn administratie en financiën te werken, kreeg ik meer ruimte in mijn hoofd. Ik kan weer genieten van de kleine dingen.',
+  'Ons huis was jaren een bron van stress. Stap voor stap hebben we opgeruimd. Nu heb ik weer ruimte om thuis te zijn, en heb ik zelfs mijn hobby opgepakt.',
+  'Nieuwe mensen ontmoeten vond ik spannend en overweldigend. Bram hielp me dit op mijn eigen tempo aan te pakken.',
 ]
 
 export default function OverMijContent() {
@@ -52,14 +52,14 @@ export default function OverMijContent() {
                 <span style={{ color: 'var(--zalm-donker)' }}>Gedreven.</span>
               </p>
               <p>
-                Bram biedt gestructureerde ondersteuning met oprechte aandacht en rust. Hij weet overzicht te creëren, stabiliteit te bieden en samen stapsgewijs te werken aan een helder doel — gewaardeerd om zijn authenticiteit en open communicatie vanuit vertrouwen en gelijkwaardigheid.
+                Bram werkt gestructureerd, met aandacht en rust. Hij brengt overzicht, biedt houvast en werkt met je toe naar een helder doel. Cliënten waarderen zijn open en gelijkwaardige manier van werken.
               </p>
               <p>
-                In zeven jaar binnen de GGZ werkte hij in uiteenlopende functies — van begeleide woonvormen tot ambulante trajecten — en bouwde hij een brede kennis en ervaring op. Naast zijn werk heeft Bram een persoonlijke interesse in gezondheid, voeding en sport, waar hij binnen het kader van zijn beroep cliënten passend en effectief weet te helpen.
+                In zeven jaar GGZ vervulde hij uiteenlopende functies, van begeleide woonvormen tot ambulante trajecten, en bouwde hij brede ervaring op. Naast zijn werk heeft Bram interesse in gezondheid, voeding en sport. Binnen de grenzen van zijn vak zet hij die kennis in waar het cliënten helpt.
               </p>
               <div className={styles.quoteBlock}>
                 <p>
-                  &ldquo;Ik vind het bijzonder om te zien hoe juist het &lsquo;anders-zijn&rsquo; een kracht kan zijn. Dat het niet veranderd, maar gewaardeerd mag worden. Met oog voor wat iemand zelf belangrijk vindt.&rdquo;
+                  &ldquo;Ik vind het bijzonder om te zien hoe juist het &lsquo;anders-zijn&rsquo; een kracht kan zijn. Dat het niet verandert, maar gewaardeerd mag worden. Met oog voor wat iemand zelf belangrijk vindt.&rdquo;
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function OverMijContent() {
                 <h3 className={vwStyles.mvTitleLight}>Missie</h3>
               </div>
               <p className={vwStyles.mvDescLight}>
-                Nieuw Niveau staat naast mensen met complexe problematiek in hun eigen omgeving — niet om het over te nemen, maar door naast iemand te staan. We maken zichtbaar hoe gedragspatronen ontstaan, hoe een aandoening iemands leven kleurt, en wat er wél mogelijk is binnen die werkelijkheid. Elke beperking draagt kracht in zich. Het zichtbaar maken en benutten — dát is het nieuwe niveau van onze cliënten.
+                Nieuw Niveau staat naast mensen met complexe problematiek, in hun eigen omgeving. Niet om het over te nemen, maar om naast iemand te staan. We maken zichtbaar hoe gedragspatronen ontstaan, hoe een aandoening iemands leven kleurt, en wat er wél mogelijk is. Elke beperking draagt kracht in zich. Die kracht zichtbaar maken en benutten: dat is het nieuwe niveau van onze cliënten.
               </p>
             </div>
           </FadeIn>
@@ -101,10 +101,10 @@ export default function OverMijContent() {
                 <h3 className={vwStyles.mvTitleDark}>Visie</h3>
               </div>
               <p className={vwStyles.mvDescDark}>
-                De zorg staat voor een fundamentele omslag. Jarenlang werd hulp individualistisch georganiseerd — gericht op de persoon, los van de wereld eromheen. Bij Nieuw Niveau staat niet alleen de cliënt centraal, maar ook zijn of haar omgeving: het netwerk, de wijk, de mensen die er dagelijks toe doen.
+                De zorg staat voor een omslag. Jarenlang werd hulp rond het individu georganiseerd, los van de wereld eromheen. Bij Nieuw Niveau staat niet alleen de cliënt centraal, maar ook de omgeving: het netwerk, de wijk, de mensen die er elke dag toe doen.
               </p>
               <p className={vwStyles.mvDescDark} style={{ marginTop: '10px' }}>
-                Tegelijkertijd groeit de druk op het zorgsysteem. Budgetten krimpen, wachtlijsten lopen op en de vraag naar begeleiding neemt toe. <strong>Nieuw Niveau sluit hierop aan door actiegericht te werken, in te zetten op innovatie en ontwikkeling, en kracht te vinden in wat eerder een beperking heette</strong> — niet werken binnen het systeem zoals het was, maar bouwen aan zorg zoals het moet zijn.
+                Tegelijk groeit de druk op de zorg. Budgetten krimpen, wachtlijsten lopen op, de vraag neemt toe. Wij sluiten daarop aan: actiegericht werken, inzetten op ontwikkeling, en kracht vinden in wat eerder een beperking heette. Niet werken binnen het systeem zoals het was, maar bouwen aan zorg zoals het moet zijn.
               </p>
             </div>
           </FadeIn>

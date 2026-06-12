@@ -8,7 +8,7 @@ const steps = [
     num: '01',
     icon: <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>,
     title: 'Aanmelding & eerste contact',
-    desc: 'Nadat je je hebt aangemeld, maken we binnen een week — bij overeenkomende beschikbaarheid — de eerste afspraak. Je begeleider komt naar jou toe, zodat de drempel zo laag mogelijk blijft.',
+    desc: 'Na je aanmelding plannen we binnen een week de eerste afspraak, als het qua agenda\'s lukt. Je begeleider komt naar jou toe. Zo blijft de drempel laag.',
     bg: 'linear-gradient(135deg, #F0E5E0, #c4857d)',
     light: false,
   },
@@ -16,23 +16,23 @@ const steps = [
     num: '02',
     icon: <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 11a4 4 0 100-8 4 4 0 000 8z"/>,
     title: 'Kennismaken',
-    desc: 'In het begin staat kennismaken centraal. We nemen de tijd om elkaar te leren kennen en te voelen of er vertrouwen kan ontstaan — want dat is de basis voor het verdere proces.',
+    desc: 'Eerst leren we elkaar kennen. We nemen er de tijd voor. Vertrouwen is de basis voor alles wat daarna komt.',
     bg: 'linear-gradient(135deg, #c4857d, #99463A)',
     light: false,
   },
   {
     num: '03',
     icon: <path d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/>,
-    title: 'In kaart brengen',
-    desc: 'Samen brengen we in kaart wat er speelt. Waar loop je tegenaan, wat heb je nodig en wat zou je anders willen? We krijgen zicht op patronen, krachten, belangrijke mensen om je heen — en wat je helpt of juist tegenhoudt.',
+    title: 'Zicht krijgen',
+    desc: 'Samen kijken we wat er speelt. Waar loop je tegenaan, wat heb je nodig, wat wil je anders? We zien patronen, krachten en de mensen om je heen. En wat je helpt of juist tegenhoudt.',
     bg: 'linear-gradient(135deg, #99463A, #7E3A30)',
     light: false,
   },
   {
     num: '04',
     icon: <path d="M5 12h14M12 5l7 7-7 7"/>,
-    title: 'Begeleiding op maat',
-    desc: 'Van daaruit ontstaat stap voor stap richting. We werken concreet en doelgericht, met aandacht voor jouw tempo en jouw regie. Het doel is altijd dat je meer op eigen kracht kunt doen.',
+    title: 'Aan de slag',
+    desc: 'Vanaf daar ontstaat richting, stap voor stap. We werken concreet, in jouw tempo en met jouw regie. Het doel: dat je steeds meer op eigen kracht kunt.',
     bg: 'linear-gradient(135deg, #C96E55, #1A1A1A)',
     light: true,
   },
@@ -86,13 +86,10 @@ export default function WerkwijzeContent() {
           <div className={styles.methodiekenSection}>
             <h2 style={{ fontSize: '22px', marginBottom: '16px' }}>Onze <em>methodieken</em></h2>
             <p className={styles.methodiekIntroText}>
-              We maken gebruik van methodieken die onderbouwd zijn in de praktijk en in onderzoek. Tegelijk kijken we steeds kritisch naar hoe deze in de praktijk uitpakken. Niet iedere aanpak werkt voor iedereen op dezelfde manier.
+              We werken met methodes die zich in de praktijk en in onderzoek bewezen hebben. Tegelijk blijven we kritisch: niet elke aanpak werkt voor iedereen hetzelfde.
             </p>
             <p className={styles.methodiekIntroText}>
-              Ons werkveld is continu in ontwikkeling. Maatschappelijke veranderingen, complexere hulpvragen en nieuwe inzichten vragen om een manier van werken die meebeweegt. Daarom volgen we actief ontwikkelingen binnen de zorg en begeleiding, en vertalen we deze naar ons dagelijks handelen.
-            </p>
-            <p className={styles.methodiekIntroText}>
-              Innovatie zit voor ons ook in hoe we werken. We evalueren regelmatig wat het effect is van de begeleiding en stellen doelen, aanpak en werkwijze bij als dat nodig is. Op deze manier zorgen we dat onze begeleiding actueel blijft, aansluit bij de praktijk en gericht is op wat daadwerkelijk helpt in het dagelijks leven van de cliënt.
+              De zorg verandert continu. Hulpvragen worden complexer en inzichten nieuwer. Daarom evalueren we regelmatig wat de begeleiding oplevert en sturen we bij waar dat nodig is. Zo blijft wat we doen aansluiten op wat echt helpt in je dagelijks leven.
             </p>
           </div>
         </FadeIn>
