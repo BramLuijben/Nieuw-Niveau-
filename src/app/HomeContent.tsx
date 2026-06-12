@@ -28,11 +28,7 @@ export default function HomeContent() {
           </span>
         </motion.h1>
 
-        <motion.p className={styles.heroSubtitle} {...fadeUp(0.3)}>
-          ambulante begeleiding regio Amersfoort, Hilversum, Zuid-Oost Utrecht en omstreken
-        </motion.p>
-
-        <motion.div className={styles.heroActions} {...fadeUp(0.5)}>
+        <motion.div className={styles.heroActions} {...fadeUp(0.4)}>
           <MotionLink href="/voor-wie" className="btn-primary">
             Meer lezen <span className="arrow">→</span>
           </MotionLink>

@@ -21,7 +21,7 @@
 }
 
 .heroTitle {
-  margin-bottom: 36px;
+  margin-bottom: 52px;
   line-height: 1.08;
   word-spacing: -0.04em;
 }
@@ -143,19 +143,19 @@
     position: absolute;
     width: 130px; height: 130px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
+    background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
     top: 8%; right: -45px;
-    opacity: 0.38;
-    box-shadow: inset -4px -4px 10px rgba(0,0,0,0.12);
+    opacity: 0.22;
+    filter: blur(18px);
   }
   .mobileBlobs::after {
     content: '';
     position: absolute;
     width: 65px; height: 65px;
     border-radius: 50%;
-    background: radial-gradient(circle at 34% 30%, #5c4e48, #3A2E2A);
+    background: radial-gradient(circle, #5c4e48 0%, #3A2E2A 100%);
     top: 60%; left: -22px;
-    opacity: 0.28;
-    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.14);
+    opacity: 0.18;
+    filter: blur(14px);
   }
 }

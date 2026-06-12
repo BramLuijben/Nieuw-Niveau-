@@ -14,20 +14,20 @@
     position: absolute;
     width: 88px; height: 88px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
+    background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
     top: 4%; right: -32px;
-    opacity: 0.36;
-    box-shadow: inset -4px -4px 10px rgba(0,0,0,0.16);
+    opacity: 0.22;
+    filter: blur(16px);
   }
   .mobileBlobs::after {
     content: '';
     position: absolute;
     width: 62px; height: 62px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #f0e5e0, #99463A);
+    background: radial-gradient(circle, #f0e5e0 0%, #99463A 100%);
     top: 65%; right: 6%;
-    opacity: 0.34;
-    box-shadow: inset -2px -2px 6px rgba(0,0,0,0.10);
+    opacity: 0.20;
+    filter: blur(14px);
   }
 }
 

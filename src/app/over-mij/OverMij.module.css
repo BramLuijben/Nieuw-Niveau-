@@ -14,20 +14,20 @@
     position: absolute;
     width: 115px; height: 115px;
     border-radius: 50%;
-    background: radial-gradient(circle at 34% 30%, #5c4e48, #3A2E2A);
+    background: radial-gradient(circle, #5c4e48 0%, #3A2E2A 100%);
     top: 2%; right: -70px;
-    opacity: 0.38;
-    box-shadow: inset -5px -5px 12px rgba(0,0,0,0.18);
+    opacity: 0.18;
+    filter: blur(18px);
   }
   .mobileBlobs::after {
     content: '';
     position: absolute;
     width: 82px; height: 82px;
     border-radius: 50%;
-    background: radial-gradient(circle at 36% 32%, #c4857d, #7E3A30);
+    background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
     top: 44%; left: -30px;
-    opacity: 0.36;
-    box-shadow: inset -4px -4px 8px rgba(0,0,0,0.14);
+    opacity: 0.22;
+    filter: blur(18px);
   }
 }
 
@@ -39,12 +39,12 @@
 
 .heroSubtitel {
   font-family: var(--font-fraunces);
-  font-size: clamp(22px, 2.8vw, 34px);
+  font-size: clamp(33px, 4.2vw, 51px);
   font-style: italic;
   font-weight: 400;
   color: var(--zwart);
   margin: 16px 0 28px;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .overGrid {
@@ -54,7 +54,10 @@
   align-items: start;
   margin-top: 24px;
 }
-@media (max-width: 900px) { .overGrid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 900px) {
+  .overGrid { grid-template-columns: 1fr; gap: 32px; }
+  .portraitStage { margin: 0 auto; }
+}
 
 /* ── Portret ── */
 
