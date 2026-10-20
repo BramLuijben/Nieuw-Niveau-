@@ -41,8 +41,8 @@ export default function HomeContent() {
       {/* ── Foto kolom ── */}
       <div className={styles.homePhoto}>
         <Image
-          src="/images/hero.png"
-          alt="Nieuw Niveau ambulante begeleiding"
+          src="/images/hero-wandeling-pad.webp"
+          alt="Twee mannen wandelen samen over een landweggetje"
           fill
           priority
           style={{ objectFit: 'cover', objectPosition: 'center 15%' }}

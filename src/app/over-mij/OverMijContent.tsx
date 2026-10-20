@@ -30,7 +30,7 @@ export default function OverMijContent() {
             <div className={styles.portraitStage}>
               <div className={styles.portraitWrap}>
                 <Image
-                  src="/images/bram.jpeg"
+                  src="/images/bram-nieuw.webp"
                   alt="Bram Luijben — oprichter en ambulant begeleider Nieuw Niveau"
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center top' }}
