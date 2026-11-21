@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
               Bedankt voor je bericht! Ik heb het ontvangen en neem zo snel mogelijk contact met je op — meestal binnen één werkdag.
             </p>
             <p style="margin:0 0 24px;line-height:1.65;color:#2D2D2D">
-              Wil je eerder contact? Stuur me een WhatsApp-bericht op <a href="https://wa.me/31629242833" style="color:#7E3A30">+31 6 29 24 28 33</a>.
+              Wil je eerder contact? Stuur me een WhatsApp-bericht op <a href="https://wa.me/31614375889" style="color:#7E3A30">+31 6 14 37 58 89</a>.
             </p>
             <p style="margin:0;color:#6B6B6E;font-size:13px">
               Met vriendelijke groet,<br>

@@ -27,8 +27,8 @@ export default function Privacyverklaring() {
               <a href="mailto:info@nieuwniveau.nl" style={{ color: 'var(--zalm-donker)' }}>
                 info@nieuwniveau.nl
               </a>,{' '}
-              <a href="tel:+31629242833" style={{ color: 'var(--zalm-donker)' }}>
-                +31 6 29 24 28 33
+              <a href="tel:+31614375889" style={{ color: 'var(--zalm-donker)' }}>
+                +31 6 14 37 58 89
               </a>.
             </p>
             <p style={{ marginTop: '8px' }}>Er is geen functionaris voor gegevensbescherming aangesteld.</p>

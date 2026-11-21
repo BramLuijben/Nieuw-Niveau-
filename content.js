@@ -14,7 +14,7 @@ module.exports = {
     naam:        'Bram Luijben',
     bedrijf:     'Nieuw Niveau Begeleiding',
     email:       'info@nieuwniveau.nl',
-    telefoon:    '+31 6 29 24 28 33',
+    telefoon:    '+31 6 14 37 58 89',
     kvk:         '42035269',
     agbCode:     '98108653',
     werkgebied:  'Amersfoort, Utrecht Zuidoost, Hilversum en omstreken',

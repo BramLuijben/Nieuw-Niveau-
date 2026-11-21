@@ -13,7 +13,7 @@ export default function MobileContact() {
         Neem contact op
       </Link>
       <a
-        href="https://wa.me/31629242833"
+        href="https://wa.me/31614375889"
         className={styles.btnWa}
         target="_blank"
         rel="noopener noreferrer"

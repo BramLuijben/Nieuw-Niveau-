@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'LocalBusiness',
     name: 'Nieuw Niveau Begeleiding',
     description: 'Ambulante WMO-begeleiding voor volwassenen in regio Amersfoort, Utrecht en Hilversum.',
-    telephone: '+31629242833',
+    telephone: '+31614375889',
     email: 'info@nieuwniveau.nl',
     url: 'https://www.nieuwniveau.nl',
     identifier: { '@type': 'PropertyValue', name: 'KvK', value: '42035269' },
