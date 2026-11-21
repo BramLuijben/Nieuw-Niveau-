@@ -10,16 +10,16 @@ body{margin:0;padding:24px;background:#fff;font-family:Arial,Helvetica,sans-seri
 #handtekening{outline:none}
 button{margin-top:24px;padding:14px 22px;font-size:16px;border:0;border-radius:999px;background:#99463a;color:#fff}
 #melding{margin-top:12px;font-size:14px;color:#6b6b6e;min-height:20px}
-.uitleg{margin-top:28px;font-size:14px;line-height:1.5;color:#6b6b6e;max-width:360px}
+.uitleg{margin-top:28px;font-size:14px;line-height:1.5;color:#6b6b6e;max-width:365px}
 </style>
 </head>
 <body>
-<div id="handtekening" contenteditable="true"><a href="https://www.nieuwniveau.nl" style="text-decoration:none;"><img src="https://nieuwniveau.nl/images/mail-handtekening-info.jpg" width="360" height="141" alt="Nieuw Niveau, Ambulante begeleiding. Mail: info@nieuwniveau.nl. Telefoonnummer: +31 6 14 37 58 89. Website: www.nieuwniveau.nl" style="display:block; width:360px; max-width:100%; height:auto; border:0; outline:none;"></a></div>
+<div id="handtekening" contenteditable="true"><a href="https://www.nieuwniveau.nl" style="text-decoration:none;"><img src="https://nieuwniveau.nl/images/mail-handtekening-info-ruim.jpg" width="365" height="124" alt="Nieuw Niveau, Ambulante begeleiding. Mail: info@nieuwniveau.nl. Telefoonnummer: +31 6 14 37 58 89. Website: www.nieuwniveau.nl" style="display:block; width:365px; max-width:100%; height:auto; border:0; outline:none;"></a></div>
 <button id="kopieer" type="button">Kopieer handtekening</button>
 <div id="melding"></div>
 <p class="uitleg">Werkt de knop niet? Tik in de handtekening hierboven, kies Selecteer alles en daarna Kopieer.</p>
 <script>
-const html='<a href="https://www.nieuwniveau.nl" style="text-decoration:none;"><img src="https://nieuwniveau.nl/images/mail-handtekening-info.jpg" width="360" height="141" alt="Nieuw Niveau, Ambulante begeleiding. Mail: info@nieuwniveau.nl. Telefoonnummer: +31 6 14 37 58 89. Website: www.nieuwniveau.nl" style="display:block; width:360px; max-width:100%; height:auto; border:0; outline:none;"></a>';
+const html='<a href="https://www.nieuwniveau.nl" style="text-decoration:none;"><img src="https://nieuwniveau.nl/images/mail-handtekening-info-ruim.jpg" width="365" height="124" alt="Nieuw Niveau, Ambulante begeleiding. Mail: info@nieuwniveau.nl. Telefoonnummer: +31 6 14 37 58 89. Website: www.nieuwniveau.nl" style="display:block; width:365px; max-width:100%; height:auto; border:0; outline:none;"></a>';
 const tekst='Nieuw Niveau, Ambulante begeleiding. Mail: info@nieuwniveau.nl. Telefoonnummer: +31 6 14 37 58 89. Website: www.nieuwniveau.nl';
 document.getElementById('kopieer').addEventListener('click', async () => {
   const m=document.getElementById('melding');
