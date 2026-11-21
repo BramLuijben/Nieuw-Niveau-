@@ -4,17 +4,19 @@
 .home {
   height: 100svh;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
   padding-top: 72px;
   position: relative;
 }
 
-/* ── Tekst kolom ── */
+/* ── Tekst, gecentreerd ── */
 .homeText {
-  padding: 60px 5vw 60px 7vw;
+  padding: 60px 7vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   background: var(--creme);
   position: relative;
   z-index: 1;
@@ -38,6 +40,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ── Zalm accentband onder hero ── */
@@ -51,62 +54,86 @@
   pointer-events: none;
 }
 
-/* ══════════════════════════════════════
-   VISUELE KOLOM — foto
-══════════════════════════════════════ */
-.homePhoto {
-  position: relative;
+/* ── Zachte bollen op de achtergrond (desktop: groter en subtieler) ── */
+.mobileBlobs {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  min-height: calc(100dvh - 72px);
-}
-
-/* ── Gradient overlays ── */
-.photoFadeLeft {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    #FAF7F2 0%,
-    rgba(250, 247, 242, 0.7) 8%,
-    rgba(250, 247, 242, 0.15) 20%,
-    transparent 32%
-  );
-  z-index: 2;
   pointer-events: none;
+  z-index: 0;
 }
-
-.photoFadeRight {
+/* Grote groene bol, helemaal in de hoek rechtsboven */
+.mobileBlobs::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to left,
-    #FAF7F2 0%,
-    rgba(250, 247, 242, 0.4) 10%,
-    transparent 24%
-  );
-  z-index: 2;
-  pointer-events: none;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8FA67E 0%, #4A6B47 100%);
+  top: -90px; right: -90px;
+  opacity: 0.24;
+  filter: blur(40px);
+  animation: drift 19s ease-in-out infinite alternate;
 }
-
-.photoFadeBottom {
+/* Grote roze bol, linksonder */
+.mobileBlobs::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    #FAF7F2 0%,
-    rgba(250, 247, 242, 0.5) 8%,
-    transparent 22%
-  );
-  z-index: 2;
-  pointer-events: none;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
+  top: 60%; left: -80px;
+  opacity: 0.24;
+  filter: blur(45px);
+  animation: drift 23s ease-in-out infinite alternate-reverse;
+}
+/* Tweede, lichtere roze bol die in de eerste overvloeit */
+.roseTwin {
+  position: absolute;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e0b3aa 0%, #b0675b 100%);
+  top: 50%; left: 70px;
+  opacity: 0.2;
+  filter: blur(55px);
+  animation: drift 17s ease-in-out infinite alternate;
 }
 
-/* ── Mobiel-bollen (alleen telefoon) ── */
-.mobileBlobs { display: none; }
+/* Open ringetje */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+}
+/* Open ringetje linksboven, knipoog naar het rondje in het logo */
+.ring {
+  width: 34px; height: 34px;
+  border: 1.5px solid #99463A;
+  top: 21%; left: 15%;
+  opacity: 0.28;
+  animation: bob 14s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-18px, 14px) scale(1.06); }
+  100% { transform: translate(10px, -10px) scale(0.97); }
+}
+@keyframes bob {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(8px, -12px); }
+  100% { transform: translate(-6px, 6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobileBlobs::before, .mobileBlobs::after, .dot, .roseTwin { animation: none; }
+}
+.homeText > *:not(.mobileBlobs) { position: relative; z-index: 1; }
+
+/* Kop breder over de pagina op grotere schermen */
+@media (min-width: 901px) {
+  .homeText { padding: 60px 5vw; }
+  .heroTitle.heroTitle { font-size: clamp(42px, 6.6vw, 8.5rem); }
+}
 
 @media (max-width: 900px) {
-  .homePhoto { display: none; }
-
   .home {
     grid-template-columns: 1fr;
     height: 100svh;
@@ -143,7 +170,7 @@
     position: absolute;
     width: 130px; height: 130px;
     border-radius: 50%;
-    background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
+    background: radial-gradient(circle, #8FA67E 0%, #4A6B47 100%);
     top: 8%; right: -45px;
     opacity: 0.50;
     filter: blur(18px);
@@ -153,9 +180,16 @@
     position: absolute;
     width: 65px; height: 65px;
     border-radius: 50%;
-    background: radial-gradient(circle, #5c4e48 0%, #3A2E2A 100%);
+    background: radial-gradient(circle, #c4857d 0%, #7E3A30 100%);
     top: 60%; left: -22px;
     opacity: 0.45;
     filter: blur(14px);
+  }
+  .dot { display: none; }
+  .roseTwin {
+    width: 80px; height: 80px;
+    top: 54%; left: 10px;
+    opacity: 0.3;
+    filter: blur(20px);
   }
 }

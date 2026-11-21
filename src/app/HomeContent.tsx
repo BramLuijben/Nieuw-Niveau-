@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MotionLink } from '@/components/Animate'
 import styles from './Home.module.css'
@@ -16,7 +15,10 @@ export default function HomeContent() {
     <main className={styles.home}>
       {/* ── Linkerkant: tekst ── */}
       <div className={styles.homeText}>
-        <div className={styles.mobileBlobs} aria-hidden="true" />
+        <div className={styles.mobileBlobs} aria-hidden="true">
+          <span className={styles.roseTwin} />
+          <span className={`${styles.dot} ${styles.ring}`} />
+        </div>
 
         <motion.h1
           className={`hero-title ${styles.heroTitle}`}
@@ -36,20 +38,6 @@ export default function HomeContent() {
             Neem contact op
           </MotionLink>
         </motion.div>
-      </div>
-
-      {/* ── Foto kolom ── */}
-      <div className={styles.homePhoto}>
-        <Image
-          src="/images/hero-wandeling-pad.webp"
-          alt="Twee mannen wandelen samen over een landweggetje"
-          fill
-          priority
-          style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
-        />
-        <div className={styles.photoFadeLeft} />
-        <div className={styles.photoFadeRight} />
-        <div className={styles.photoFadeBottom} />
       </div>
     </main>
   )
